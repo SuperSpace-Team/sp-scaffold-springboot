@@ -14,8 +14,8 @@ import java.util.Map;
  * @date: Created in 7/4/21 8:07 PM
  */
 public class BaseBizRepositoryImpl<MP extends BaseMapper<PO>, PO> extends ServiceImpl<MP, PO> {
-    @Autowired
-    private MP mapper;
+//    @Autowired
+//    private MP mapper;
 
 //    /**
 //     * 根据Map条件查询列表数据

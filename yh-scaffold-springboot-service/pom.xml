@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>yh-scaffold-springboot-service</artifactId>
+
+    <properties>
+        <yh-infra-comp-core.version>1.0.0-SNAPSHOT</yh-infra-comp-core.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>com.yh.scaffold</groupId>
@@ -72,6 +76,13 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+
+        <!--基础组件核心包-->
+        <dependency>
+            <groupId>com.yh.infra.comp</groupId>
+            <artifactId>yh-infra-comp-core</artifactId>
+            <version>${yh-infra-comp-core.version}</version>
         </dependency>
     </dependencies>
 

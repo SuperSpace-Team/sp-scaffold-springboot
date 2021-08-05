@@ -11,8 +11,7 @@ import java.util.List;
  * @author: luchao
  * @date: Created in 8/4/21 10:07 PM
  */
-@Repository
-public interface DemoBizRepository extends BaseBizRepository<DemoBizMapper, Long> {
+public interface DemoBizRepository extends BaseBizRepository<DemoBizPO, Long> {
     /**
      * 测试查询方法
      * @return

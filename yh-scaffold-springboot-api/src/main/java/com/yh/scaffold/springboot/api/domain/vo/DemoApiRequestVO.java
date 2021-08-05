@@ -1,6 +1,6 @@
 package com.yh.scaffold.springboot.domain.vo;
 
-import com.yh.infra.common.dto.BaseRequestDTO;
+import com.yh.scaffold.springboot.api.domain.vo.BasePageQueryReqVO;
 import com.yh.scaffold.springboot.domain.dto.MyBizRequestDTO;
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import lombok.Data;
  * @date: Created in 6/22/21 5:36 PM
  */
 @Data
-public class DemoApiRequestVO extends BaseRequestDTO {
+public class DemoApiRequestVO extends BasePageQueryReqVO {
     /**
      * 测试属性1
      */

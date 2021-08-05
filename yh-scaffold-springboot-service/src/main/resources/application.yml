@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: app-name-test
+  project:
+    name: project-code-test
+apollo:
+  bootstrap:
+    eagerLoad:
+      enabled: false
+    enabled: false
+    namespaces: application.yml
+  cacheDir: /opt/data/apollo-cache
+  cluster: SH
+  meta: http://apollo-dev-sh.yonghui.cn:8080
+app:
+  id: [project-code]--[app-code]
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

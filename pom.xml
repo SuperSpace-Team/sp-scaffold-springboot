@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yh.scaffold</groupId>
+    <artifactId>yh-scaffold-springboot-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>com.yh.infra.comp</groupId>
+        <artifactId>yh-infra-comp-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <modules>
+        <module>yh-scaffold-springboot-api</module>
+        <module>yh-scaffold-springboot-service</module>
+        <module>yh-scaffold-springboot-dao</module>
+    </modules>
+
+    <properties>
+        <yh-scaffold-springboot-api.version>1.0.0-SNAPSHOT</yh-scaffold-springboot-api.version>
+        <yh-scaffold-springboot-dao.version>1.0.0-SNAPSHOT</yh-scaffold-springboot-dao.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.yh.scaffold.demo.api</groupId>
+                <artifactId>yh-scaffold-springboot-api</artifactId>
+                <version>${yh-scaffold-springboot-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yh.scaffold</groupId>
+                <artifactId>yh-scaffold-springboot-dao</artifactId>
+                <version>${yh-scaffold-springboot-dao.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

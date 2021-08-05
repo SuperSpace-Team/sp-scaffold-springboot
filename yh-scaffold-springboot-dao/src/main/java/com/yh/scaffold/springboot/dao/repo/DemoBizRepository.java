@@ -1,8 +1,7 @@
 package com.yh.scaffold.springboot.dao.repo;
 
-import com.yh.scaffold.springboot.api.DemoBizPO;
+import com.yh.scaffold.springboot.api.domain.po.DemoBizPO;
 import com.yh.scaffold.springboot.dao.mapper.DemoBizMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.yh.scaffold.springboot.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yh.scaffold.springboot.api.DemoBizPO;
+import com.yh.scaffold.springboot.api.domain.po.DemoBizPO;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.yh.scaffold.springboot.api;
+package com.yh.scaffold.springboot.api.domain.po;
 
 import com.yh.infra.common.base.BasePO;
 import com.yh.scaffold.springboot.domain.dto.MyBizRequestDTO;

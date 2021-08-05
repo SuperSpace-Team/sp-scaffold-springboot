@@ -1,6 +1,6 @@
 package com.yh.scaffold.springboot.dao.repo;
 
-import com.yh.scaffold.springboot.api.DemoBizPO;
+import com.yh.scaffold.springboot.api.domain.po.DemoBizPO;
 import com.yh.scaffold.springboot.dao.mapper.DemoBizMapper;
 import org.springframework.stereotype.Repository;
 

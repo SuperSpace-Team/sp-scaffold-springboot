@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ import java.util.List;
  * @date: Created in 8/4/21 10:05 PM
  */
 @Slf4j
+@Service
 public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBizService {
     @Autowired
     BizValidationManager validationManager;

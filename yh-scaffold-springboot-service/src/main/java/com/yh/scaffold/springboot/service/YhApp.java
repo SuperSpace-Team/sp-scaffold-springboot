@@ -15,13 +15,13 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author luchao
  * @date 2020/7/2
  */
-@SpringBootApplication(scanBasePackages = {"com.yh.scaffold.springboot"})
+@SpringBootApplication(scanBasePackages = {"com.yh.scaffold.springboot", "com.yh.infra.comp", "com.baomidou")
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableApolloConfig
 @EnableFeignClients(basePackages = "com.yh.scaffold.springboot.api")
 @EntityScan(basePackages = "com.yh.scaffold.springboot.api.*")
-@MapperScan("com.yh.scaffold.springboot.dao.mapper")
+@MapperScan("com.yh.scaffold.springboot.dao")
 public class YhApp {
     public static void main(String[] args) {
         SpringApplication.run(YhApp.class, args);

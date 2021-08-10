@@ -12,23 +12,27 @@ import lombok.Data;
  */
 @Data
 public class DemoBizPO extends BasePO {
-    /**
-     * 测试属性1
-     */
-    private String testProperty1;
+//    /**
+//     * 测试属性1
+//     */
+//    private String testProperty1;
+//
+//    /**
+//     * 测试属性2
+//     */
+//    private Integer testProperty2;
+//
+//    /**
+//     * 测试属性3
+//     */
+//    private Boolean testProperty3;
+//
+//    /**
+//     * 测试属性4
+//     */
+//    private MyBizRequestDTO testProperty4;
 
-    /**
-     * 测试属性2
-     */
-    private Integer testProperty2;
-
-    /**
-     * 测试属性3
-     */
-    private Boolean testProperty3;
-
-    /**
-     * 测试属性4
-     */
-    private MyBizRequestDTO testProperty4;
+    private String code;
+    private String name;
+    private String description;
 }

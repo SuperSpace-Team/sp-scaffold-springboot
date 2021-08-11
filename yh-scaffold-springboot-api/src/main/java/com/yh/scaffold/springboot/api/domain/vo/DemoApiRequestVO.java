@@ -1,7 +1,7 @@
 package com.yh.scaffold.springboot.domain.vo;
 
 import com.yh.scaffold.springboot.api.domain.vo.BasePageQueryReqVO;
-import com.yh.scaffold.springboot.domain.dto.MyBizRequestDTO;
+import com.yh.scaffold.springboot.api.domain.dto.MyBizRequestDTO;
 import lombok.Data;
 
 /**

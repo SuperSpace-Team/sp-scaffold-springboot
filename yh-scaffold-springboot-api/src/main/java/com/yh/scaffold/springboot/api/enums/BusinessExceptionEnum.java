@@ -1,4 +1,4 @@
-package com.yh.scaffold.springboot.enums;
+package com.yh.scaffold.springboot.api.enums;
 
 import com.yh.infra.common.base.BaseBizEnum;
 import com.yh.infra.common.exception.BusinessException;

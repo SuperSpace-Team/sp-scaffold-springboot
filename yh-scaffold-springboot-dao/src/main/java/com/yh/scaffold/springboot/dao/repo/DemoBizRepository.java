@@ -1,14 +1,12 @@
 package com.yh.scaffold.springboot.dao.repo;
 
 import com.yh.scaffold.springboot.api.domain.po.DemoBizPO;
-import com.yh.scaffold.springboot.dao.mapper.DemoBizMapper;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
- * @description:
+ * @description: 业务操作仓储接口
  * @author: luchao
  * @date: Created in 8/4/21 10:07 PM
  */

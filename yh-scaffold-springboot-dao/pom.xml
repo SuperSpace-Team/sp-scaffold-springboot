@@ -38,6 +38,16 @@
         <dependency>
             <groupId>com.yh.common</groupId>
             <artifactId>yh-lark-orm</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mybatis</artifactId>
+                    <groupId>org.mybatis</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>mybatis-spring</artifactId>
+                    <groupId>org.mybatis</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.yh.common</groupId>

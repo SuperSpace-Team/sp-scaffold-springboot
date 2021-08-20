@@ -38,6 +38,16 @@
                 <artifactId>yh-scaffold-springboot-dao</artifactId>
                 <version>${yh-scaffold-springboot-dao.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.4.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.26</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

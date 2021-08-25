@@ -1,4 +1,4 @@
-package com.yh.scaffold.springboot.utils;
+package com.yh.scaffold.springboot.api.utils;
 
 /**
  * @description: 自定义工具类

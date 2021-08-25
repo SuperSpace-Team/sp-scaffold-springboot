@@ -42,7 +42,7 @@
         </Async>
     </appenders>
     <loggers>
-        <root level="INFO">
+        <root level="DEBUG">
             <appenderref ref="CONSOLE" />
             <appenderref ref="infoAsync" />
             <appenderref ref="errorAsync" />

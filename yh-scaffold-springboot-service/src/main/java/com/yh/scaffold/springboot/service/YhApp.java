@@ -17,8 +17,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication(scanBasePackages = {"com.yh.scaffold.springboot", "com.yh.infra.comp", "com.baomidou"})
 @EnableDiscoveryClient
-@EnableCircuitBreaker
-@EnableApolloConfig
+//@EnableCircuitBreaker
+//@EnableApolloConfig
 @EnableFeignClients(basePackages = "com.yh.scaffold.springboot.api")
 @EntityScan(basePackages = "com.yh.scaffold.springboot.api.*")
 @MapperScan("com.yh.scaffold.springboot.dao")

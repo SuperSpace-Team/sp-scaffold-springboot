@@ -8,6 +8,7 @@ import com.yh.scaffold.springboot.api.domain.bo.DemoBizBO;
 import com.yh.scaffold.springboot.api.domain.po.DemoBizPO;
 import com.yh.scaffold.springboot.api.domain.vo.BasePageQueryReqVO;
 import com.yh.scaffold.springboot.dao.repo.DemoBizRepository;
+import com.yh.scaffold.springboot.dao.repo.DemoBizRepositoryImpl;
 import com.yh.scaffold.springboot.service.svc.DemoBizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,20 +22,20 @@ import java.util.Map;
  */
 @Service
 public class DemoBizServiceImpl extends BaseBizServiceImpl<Long, DemoBizBO> implements DemoBizService {
-    @Autowired
-    DemoBizRepository demoBizRepository;
+//    @Autowired
+    DemoBizRepositoryImpl demoBizRepository;
 
     @Override
     public Boolean save(DemoBizBO bizBO) {
         validate(bizBO);
 
         DemoBizPO demoBizPO = DozerUtil.map(bizBO, DemoBizPO.class);
-        if (bizBO.getId() == null) {
-            bizBO.setVersion(1L);
-            return demoBizRepository.insert(demoBizPO) > 0;
+        if (demoBizPO.getId() == null) {
+            demoBizPO.setVersion(1L);
+            return demoBizRepository.save(demoBizPO);
         }
 
-        return demoBizRepository.update(demoBizPO) > 0;
+        return demoBizRepository.updateById(demoBizPO);
     }
 
     @Override

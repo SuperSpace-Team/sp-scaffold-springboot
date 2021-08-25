@@ -4,13 +4,11 @@ import com.yh.common.lark.common.dao.Page;
 import com.yh.common.lark.common.dao.Pagination;
 import com.yh.common.lark.common.dao.Sort;
 import com.yh.infra.common.utils.bean.DozerUtil;
+import com.yh.infra.common.vo.BasePageQueryReqVO;
 import com.yh.scaffold.springboot.api.domain.bo.DemoBizBO;
 import com.yh.scaffold.springboot.api.domain.po.DemoBizPO;
-import com.yh.scaffold.springboot.api.domain.vo.BasePageQueryReqVO;
-import com.yh.scaffold.springboot.dao.repo.DemoBizRepository;
 import com.yh.scaffold.springboot.dao.repo.DemoBizRepositoryImpl;
 import com.yh.scaffold.springboot.service.svc.DemoBizService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

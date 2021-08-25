@@ -1,10 +1,10 @@
 package com.yh.scaffold.springboot.service.svc.impl;
 
 import com.yh.common.lark.orm.dao.supports.BaseDao;
+import com.yh.infra.common.bo.BaseBO;
 import com.yh.infra.common.enums.SystemErrorCodeEnum;
 import com.yh.infra.common.exception.BusinessException;
 import com.yh.infra.comp.core.validator.BizValidationManager;
-import com.yh.scaffold.springboot.api.domain.bo.BaseBO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;

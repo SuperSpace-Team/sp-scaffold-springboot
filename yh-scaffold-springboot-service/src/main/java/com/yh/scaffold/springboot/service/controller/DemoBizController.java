@@ -2,8 +2,8 @@ package com.yh.scaffold.springboot.service.controller;
 
 import com.yh.infra.common.utils.ResponseUtil;
 import com.yh.infra.common.utils.bean.DozerUtil;
+import com.yh.infra.common.vo.BasePageQueryReqVO;
 import com.yh.infra.common.vo.ResponseVO;
-import com.yh.scaffold.springboot.api.domain.vo.BasePageQueryReqVO;
 import com.yh.scaffold.springboot.api.domain.vo.DemoApiPageRespVO;
 import com.yh.scaffold.springboot.service.svc.DemoBizService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -18,6 +18,12 @@
         <dependency>
             <groupId>com.yh.scaffold</groupId>
             <artifactId>yh-scaffold-springboot-dao</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>yh-infra-consul-retry-starter</artifactId>
+                    <groupId>com.yh.infra.svc.gov</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -97,11 +103,61 @@
             <groupId>com.yh.infra.comp</groupId>
             <artifactId>yh-infra-comp-core</artifactId>
             <version>${yh-infra-comp-core.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>yh-infra-consul-retry-starter</artifactId>
+                    <groupId>com.yh.infra.svc.gov</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.0</version>
         </dependency>
     </dependencies>
 
     <build>
         <finalName>app</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.4.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <inherited>true</inherited>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
 </project>

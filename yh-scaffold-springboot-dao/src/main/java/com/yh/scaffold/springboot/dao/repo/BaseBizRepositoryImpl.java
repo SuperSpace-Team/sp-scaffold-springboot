@@ -14,15 +14,10 @@ import java.util.Map;
  * @date: Created in 7/4/21 8:07 PM
  */
 public class BaseBizRepositoryImpl<MP extends BaseMapper<PO>, PO> extends ServiceImpl<MP, PO> {
-//    @Autowired
-//    private MP mapper;
+    @Autowired
+    private DemoBizRepository demoBizRepository;
 
-//    /**
-//     * 根据Map条件查询列表数据
-//     * @param map
-//     * @return
-//     */
-//    public List<PO> getList(Map<String, Object> map) {
-//        return mapper.selectByMap(map);
-//    }
+    public BaseBizRepository getRepository(){
+        return demoBizRepository;
+    }
 }

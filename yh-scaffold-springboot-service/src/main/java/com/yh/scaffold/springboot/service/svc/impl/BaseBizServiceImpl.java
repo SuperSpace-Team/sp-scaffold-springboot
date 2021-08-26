@@ -88,7 +88,7 @@ public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBi
                             "数据库中存在重复数据，请确保业务代码、名称等字段唯一存在" + model.getId());
                 } else {
                     throw new BusinessException(SystemErrorCodeEnum.DATA_ENROLL_DB_ERROR.getCode(),
-                            SystemErrorCodeEnum.DATA_ENROLL_DB_ERROR.getMessage() + "请重试" + model.getId());
+                            SystemErrorCodeEnum.DATA_ENROLL_DB_ERROR.getMsg() + "请重试" + model.getId());
                 }
             }
         }
@@ -106,7 +106,7 @@ public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBi
                         "数据库中存在重复数据，请确保记录唯一存在" + model.getId());
             } else {
                 throw new BusinessException(SystemErrorCodeEnum.DATA_ENROLL_DB_ERROR.getCode(),
-                        SystemErrorCodeEnum.DATA_ENROLL_DB_ERROR.getMessage() + "请重试" + model.getId());
+                        SystemErrorCodeEnum.DATA_ENROLL_DB_ERROR.getMsg() + "请重试" + model.getId());
             }
         }
 

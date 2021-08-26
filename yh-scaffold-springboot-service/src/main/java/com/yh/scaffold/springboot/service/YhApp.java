@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * 启动类
@@ -15,10 +16,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author luchao
  * @date 2020/7/2
  */
-@SpringBootApplication(scanBasePackages = {"com.yh.scaffold.springboot", "com.yh.infra.comp", "com.baomidou"})
+@SpringBootApplication(scanBasePackages = {"com.yh.common.lark.orm.aop","com.yh.scaffold.springboot", "com.yh.infra.comp", "com.baomidou"})
 @EnableDiscoveryClient
-//@EnableCircuitBreaker
-//@EnableApolloConfig
+@EnableCircuitBreaker
+@EnableApolloConfig
 @EnableFeignClients(basePackages = "com.yh.scaffold.springboot.api")
 @EntityScan(basePackages = "com.yh.scaffold.springboot.api.*")
 @MapperScan("com.yh.scaffold.springboot.dao")

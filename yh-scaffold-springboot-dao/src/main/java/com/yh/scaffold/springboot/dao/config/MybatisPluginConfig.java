@@ -1,4 +1,4 @@
-package com.yh.scaffold.springboot.service.svc;
+package com.yh.scaffold.springboot.dao.config;
 
 import com.yh.common.lark.orm.aop.OffsetLimitInterceptor;
 import com.yh.common.lark.orm.aop.QueryAspect;

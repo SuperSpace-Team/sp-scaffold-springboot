@@ -1,4 +1,4 @@
-package com.yh.scaffold.springboot.service.svc;
+package com.yh.scaffold.springboot.dao.aop;
 
 import com.yh.common.lark.orm.aop.QueryAspect;
 import org.aspectj.lang.annotation.Aspect;

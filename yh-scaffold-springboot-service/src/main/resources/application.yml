@@ -91,9 +91,5 @@ apollo:
   meta: http://apollo-dev-sh.yonghui.cn:8080
 app:
   id: yh-app-templat--yh-scaffold-springboot-parent
-mybatis:
-  config-location: "classpath:config/mybatis-config.xml"
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.yh.scaffold.springboot.dao.mapper
 
 

@@ -16,7 +16,7 @@ import org.springframework.context.annotation.PropertySource;
  * @author luchao
  * @date 2020/7/2
  */
-@SpringBootApplication(scanBasePackages = {"com.yh.common.lark.orm.aop","com.yh.scaffold.springboot", "com.yh.infra.comp", "com.baomidou"})
+@SpringBootApplication(scanBasePackages = {"com.yh.scaffold.springboot", "com.yh.infra.comp", "com.baomidou"})
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableApolloConfig

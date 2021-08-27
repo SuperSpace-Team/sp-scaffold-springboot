@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.ContextLoader;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -69,5 +70,10 @@ public class DemoBizServiceImpl extends BaseBizServiceImpl<Long, DemoBizBO> impl
     public Pagination<DemoBizBO> getPageDataList(BasePageQueryReqVO basePageQueryVO) {
         return DozerUtil.map(demoBizRepository.getRepository().findListByQueryMapWithPage(basePageQueryVO.getPage(),
                 basePageQueryVO.getSorts(), basePageQueryVO.getParams()), Pagination.class);
+    }
+
+    @Override
+    public List<DemoBizBO> plusTestGetByCode(String code) {
+        return DozerUtil.mapList(demoBizRepository.plusTestGetByCode(code), DemoBizBO.class);
     }
 }

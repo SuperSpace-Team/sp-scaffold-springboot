@@ -6,6 +6,7 @@ import com.yh.scaffold.springboot.api.domain.vo.BasePageQueryReqVO;
 import com.yh.scaffold.springboot.api.domain.vo.DemoApiPageRespVO;
 import com.yh.scaffold.springboot.api.domain.bo.DemoBizBO;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,5 +35,7 @@ public interface DemoBizService extends BaseBizService<Long, DemoBizBO> {
      * @return
      */
     Pagination<DemoBizBO> query(Page page, Map<String, Object> param);
+
+    List<DemoBizBO> plusTestGetByCode(String code);
 
 }

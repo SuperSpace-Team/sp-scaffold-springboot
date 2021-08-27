@@ -13,11 +13,8 @@ import java.util.Map;
  * @author: luchao
  * @date: Created in 7/4/21 8:07 PM
  */
-public class BaseBizRepositoryImpl<MP extends BaseMapper<PO>, PO> extends ServiceImpl<MP, PO> {
-    @Autowired
-    private DemoBizRepository demoBizRepository;
+public abstract class BaseBizRepositoryImpl<MP extends BaseMapper<PO>, PO> extends ServiceImpl<MP, PO> {
 
-    public BaseBizRepository getRepository(){
-        return demoBizRepository;
-    }
+    public abstract BaseBizRepository getRepository();
+
 }

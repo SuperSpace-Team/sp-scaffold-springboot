@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 import java.util.ArrayList;
 
 /**
@@ -49,5 +50,11 @@ public class DemoBizController {
     @ResponseBody
     public ResponseVO<Boolean> getTestGetResult(@RequestBody DemoBizBO bo){
         return ResponseUtil.getResponse(demoBizService.save(bo));
+    }
+
+    @GetMapping("/test/plus/getByCode")
+    @ResponseBody
+    public ResponseVO<DemoApiPageRespVO> getPlusTest(@RequestParam("code") String code){
+        return ResponseUtil.getResponse(demoBizService.plusTestGetByCode(code));
     }
 }

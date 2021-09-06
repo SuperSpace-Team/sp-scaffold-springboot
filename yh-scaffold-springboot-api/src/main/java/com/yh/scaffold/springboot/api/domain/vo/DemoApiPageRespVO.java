@@ -1,6 +1,7 @@
 package com.yh.scaffold.springboot.api.domain.vo;
 
 import com.yh.infra.common.dto.BaseResponseDTO;
+import com.yh.infra.common.vo.BasePageQueryRespVO;
 import lombok.Data;
 
 import java.util.List;

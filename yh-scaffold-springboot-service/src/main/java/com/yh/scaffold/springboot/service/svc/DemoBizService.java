@@ -2,8 +2,7 @@ package com.yh.scaffold.springboot.service.svc;
 
 import com.yh.common.lark.common.dao.Page;
 import com.yh.common.lark.common.dao.Pagination;
-import com.yh.scaffold.springboot.api.domain.vo.BasePageQueryReqVO;
-import com.yh.scaffold.springboot.api.domain.vo.DemoApiPageRespVO;
+import com.yh.infra.common.vo.BasePageQueryReqVO;
 import com.yh.scaffold.springboot.api.domain.bo.DemoBizBO;
 
 import java.util.List;

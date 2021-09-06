@@ -3,17 +3,14 @@ package com.yh.scaffold.springboot.service.svc.impl;
 import com.yh.common.lark.common.dao.Page;
 import com.yh.common.lark.common.dao.Pagination;
 import com.yh.common.lark.common.dao.Sort;
-import com.yh.common.lark.orm.aop.QueryAspect;
 import com.yh.infra.common.utils.bean.DozerUtil;
+import com.yh.infra.common.vo.BasePageQueryReqVO;
 import com.yh.scaffold.springboot.api.domain.bo.DemoBizBO;
 import com.yh.scaffold.springboot.api.domain.po.DemoBizPO;
-import com.yh.scaffold.springboot.api.domain.vo.BasePageQueryReqVO;
-import com.yh.scaffold.springboot.dao.repo.BaseBizRepository;
 import com.yh.scaffold.springboot.dao.repo.DemoBizRepositoryImpl;
 import com.yh.scaffold.springboot.service.svc.DemoBizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.ContextLoader;
 
 import java.util.List;
 import java.util.Map;

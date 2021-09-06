@@ -1,5 +1,6 @@
 package com.yh.scaffold.springboot.api.domain.bo;
 
+import com.yh.infra.common.bo.BaseBO;
 import lombok.Data;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * @date: Created in 8/4/21 10:17 PM
  */
 @Data
-public class DemoBizBO extends BaseBO{
+public class DemoBizBO extends BaseBO {
     /**
      * 测试属性1
      */

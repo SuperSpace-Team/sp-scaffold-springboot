@@ -1,4 +1,4 @@
-package com.yh.scaffold.springboot.annotation;
+package com.yh.scaffold.springboot.api.annotation;
 
 import java.lang.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.yh.scaffold.springboot.constant;
+package com.yh.scaffold.springboot.api.constant;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -5,6 +5,9 @@ import com.yh.infra.common.exception.BusinessException;
 
 import java.text.MessageFormat;
 
+/**
+ * 业务枚举类(需按规范实现BaseBizEnum接口)
+ */
 public enum BusinessExceptionEnum implements BaseBizEnum {
     DUPLICATE_PARAM_A_ERROR(15010, "存在重复的参数A，请重新输入"),
     NOT_FOUND_SOME_CONFIG_DATA(15012, "找不到某个配置数据,请确认!"),

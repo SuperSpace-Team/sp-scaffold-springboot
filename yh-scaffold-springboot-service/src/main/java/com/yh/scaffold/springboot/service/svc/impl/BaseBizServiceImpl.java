@@ -6,7 +6,7 @@ import com.yh.infra.common.enums.SystemErrorCodeEnum;
 import com.yh.infra.common.exception.BusinessException;
 import com.yh.infra.comp.core.validator.BizValidationManager;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;

@@ -6,12 +6,12 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @description:
+ * @description: Demo业务1对象
  * @author: luchao
  * @date: Created in 8/4/21 10:17 PM
  */
 @Data
-public class DemoBizBO extends BaseBO {
+public class DemoBiz1BO extends BaseBO {
     /**
      * 测试属性1
      */

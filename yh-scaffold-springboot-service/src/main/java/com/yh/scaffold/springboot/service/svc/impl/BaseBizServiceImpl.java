@@ -5,6 +5,7 @@ import com.yh.infra.common.bo.BaseBO;
 import com.yh.infra.common.enums.SystemErrorCodeEnum;
 import com.yh.infra.common.exception.BusinessException;
 import com.yh.infra.comp.core.validator.BizValidationManager;
+import com.yh.scaffold.springboot.service.svc.BaseBizService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +16,20 @@ import java.util.List;
 
 /**
  * @description: 基础业务实现类
- * 用于放置可复用代码,适合大部分的manager,但也有少数manager需要进行定制,KEY不是表的ID,
- * 一般来说是业务code或具有联合主键的属性/字段,所以需要定制化getModelByCode.
+ * 用于放置可复用代码,适合大部分的ServiceImpl,但也有少数ServiceImpl需要进行定制,KEY不一定是表的ID,
+ * 一般是业务编码或具有联合主键的属性/字段,所以需要定制化getModelByCode.
+ *
  * @author: luchao
  * @date: Created in 8/4/21 10:05 PM
  */
 @Slf4j
 @Service
-public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBizService {
+public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> {
     @Autowired
     BizValidationManager validationManager;
 
     /**
-     * 取得model对应的表名
+     * 获取model对应的表名
      * @return
      */
     protected String getTableName() {
@@ -35,7 +37,7 @@ public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBi
     };
 
     /**
-     * 取得DAO对象
+     * 获取DAO对象
      *
      * @return
      */
@@ -45,7 +47,7 @@ public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBi
 
     /**
      * 根据编码从DB中查询到PO实体
-     * 适用于有业务编码字段的记录查询
+     * 适用于DB表/实体带有业务编码字段的场景
      * @param code
      * @return
      */
@@ -113,19 +115,31 @@ public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBi
         return true;
     }
 
+    /**
+     * 启用/生效该条记录
+     * @param key
+     * @param operator
+     * @return
+     */
     public Boolean enable(KEY key, String operator) {
-//        MODEL model = getDao().findListByQueryMap(key);
-//        return getDao().update();
         return true;
+//      return changeStatus(key, operator, true);
     }
 
+    /**
+     * 禁用/失效该条记录
+     * @param key
+     * @param operator
+     * @return
+     */
     public Boolean disable(KEY key, String operator) {
-//        changeStatus(key, operator, false);
+//      return changeStatus(key, operator, false);
         return true;
     }
 
 //    /**
 //     * 更新记录的业务状态值
+//     * 适用于DB表/实体带有status字段的场景
 //     * @param key
 //     * @param operator
 //     * @param newStatus
@@ -134,17 +148,19 @@ public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBi
 //    protected Boolean changeStatus(KEY key, String operator, Boolean newStatus) {
 //        Integer code = (Integer) key;
 //        MODEL model = getModelByCode(code);
+//
 //        // 已经是目标状态，不需要更改
-//        if (newStatus.equals(model.getLifecycle())) {
+//        if (newStatus.equals(model.getStatus())) {
 //            return true;
 //        }
 //
-//        int update = bizDao.changeLifecycle(getTableName(), code, operator, newStatus, model.getVersion());
+//        //自行实现changeStatus() SQL查询
+//        int update = getDao().changeStatus(getTableName(), code, operator, newStatus, model.getVersion());
 //        // 更新成功
 //        if (update != 1) {
 //            model = getModelByCode(code);
-//            // 被别人更新了,不需要更新 版本号
-//            if (newStatus.equals(model.getLifecycle())) {
+//            // 若被更新过,则不需要更新版本号
+//            if (newStatus.equals(model.getStatus())) {
 //                return true;
 //            }
 //
@@ -153,6 +169,7 @@ public class BaseBizServiceImpl<KEY, MODEL extends BaseBO> { //implements BaseBi
 //                throw new BusinessException(SystemErrorCodeEnum.DATA_ENROLL_DB_ERROR.getCode(), "无法更新状态为" + newStatus);
 //            }
 //        }
+//
 //        return true;
 //    }
 }

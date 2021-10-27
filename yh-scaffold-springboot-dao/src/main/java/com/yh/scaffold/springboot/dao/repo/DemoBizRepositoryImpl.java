@@ -19,6 +19,7 @@ public class DemoBizRepositoryImpl extends BaseBizRepositoryImpl<DemoBizMapper, 
     @Autowired
     private DemoBizRepository demoBizRepository;
 
+    @Override
     public BaseBizRepository getRepository(){
         return demoBizRepository;
     }

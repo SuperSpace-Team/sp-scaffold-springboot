@@ -22,7 +22,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/test_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
     username: root
-    password: zl123456
+    password: 602231903
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -79,17 +79,11 @@ spring:
   profiles:
     active: local
   project:
-    name: yh-app-templat
-apollo:
-  bootstrap:
-    eagerLoad:
-      enabled: false
-    enabled: false
-    namespaces: application.yml
-  cacheDir: /opt/data/apollo-cache
-  cluster: SH
-  meta: http://apollo-dev-sh.yonghui.cn:8080
-app:
-  id: yh-app-templat--yh-scaffold-springboot-parent
+    name: yh-app-template
+yh:
+  service1:
+    name: ${spring.application.name}
+    url: ~
+
 
 

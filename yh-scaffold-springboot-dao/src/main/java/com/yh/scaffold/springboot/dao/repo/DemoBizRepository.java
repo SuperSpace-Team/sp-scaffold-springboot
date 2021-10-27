@@ -12,9 +12,9 @@ import java.util.List;
  */
 @Component
 public interface DemoBizRepository extends BaseBizRepository<DemoBizPO, Long> {
-    /**
-     * 测试查询方法
-     * @return
-     */
-    List<DemoBizPO> getTestDataList();
+//    /**
+//     * 测试查询方法
+//     * @return
+//     */
+//    List<DemoBizPO> getTestDataList();
 }

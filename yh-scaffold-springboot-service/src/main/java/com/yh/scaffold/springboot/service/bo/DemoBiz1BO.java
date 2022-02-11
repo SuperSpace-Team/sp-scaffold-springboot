@@ -13,6 +13,8 @@ import java.util.List;
  * @date: Created in 8/4/21 10:17 PM
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class DemoBiz1BO extends BaseBO {
     /**
      * 测试属性1

@@ -22,7 +22,12 @@
             <artifactId>yh-scaffold-springboot-dao</artifactId>
         </dependency>
 
-        <!--基础组件Apollo配置中心客户端-->
+        <!--基础组件核心包-->
+        <dependency>
+            <groupId>com.yh.infra.comp</groupId>
+            <artifactId>yh-infra-comp-core</artifactId>
+        </dependency>
+        <!--基础组件Apollo客户端-->
         <dependency>
             <groupId>com.yh.infra.comp</groupId>
             <artifactId>yh-infra-comp-apollo</artifactId>

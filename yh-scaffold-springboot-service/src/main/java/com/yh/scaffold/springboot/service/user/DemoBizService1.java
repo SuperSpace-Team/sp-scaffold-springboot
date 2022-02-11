@@ -1,9 +1,12 @@
 package com.yh.scaffold.springboot.service.user;
 
 import com.yh.common.lark.common.dao.Page;
+import com.yh.common.lark.common.dao.Pagination;
 import com.yh.infra.common.vo.BasePageQueryReqVO;
+import com.yh.scaffold.springboot.service.base.BaseBizService;
 import com.yh.scaffold.springboot.service.bo.DemoBiz1BO;
 
+import java.util.List;
 import java.util.Map;
 
 /**

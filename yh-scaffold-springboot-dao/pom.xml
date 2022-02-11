@@ -30,7 +30,7 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
 
-        <!--自定义ORM框架-lark-->
+        <!--依赖YH规范化ORM框架lark-->
         <dependency>
             <groupId>com.yh.common</groupId>
             <artifactId>yh-lark-common</artifactId>
@@ -53,8 +53,10 @@
             <groupId>com.yh.common</groupId>
             <artifactId>yh-lark-tool</artifactId>
         </dependency>
+
+        <!--依赖API层Domain定义-->
         <dependency>
-            <groupId>com.yh.scaffold.demo.api</groupId>
+            <groupId>com.yh.scaffold</groupId>
             <artifactId>yh-scaffold-springboot-api</artifactId>
         </dependency>
     </dependencies>

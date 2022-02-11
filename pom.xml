@@ -9,25 +9,24 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
+    <modules>
+        <module>yh-scaffold-springboot-feign</module>
+        <module>yh-scaffold-springboot-api</module>
+        <module>yh-scaffold-springboot-dao</module>
+        <module>yh-scaffold-springboot-service</module>
+        <module>yh-scaffold-springboot-server</module>
+    </modules>
+
     <parent>
         <groupId>com.yh.infra.comp</groupId>
         <artifactId>yh-infra-comp-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <modules>
-        <module>yh-scaffold-springboot-api</module>
-        <module>yh-scaffold-springboot-service</module>
-        <module>yh-scaffold-springboot-dao</module>
-    </modules>
-
     <properties>
-        <yh-scaffold-springboot-api.version>1.0.0-SNAPSHOT</yh-scaffold-springboot-api.version>
-        <yh-scaffold-springboot-dao.version>1.0.0-SNAPSHOT</yh-scaffold-springboot-dao.version>
-        <mybatis-plus.version>3.4.3.1</mybatis-plus.version>
-        <mysql-connector.version>8.0.26</mysql-connector.version>
+        <project.version>1.0.0-SNAPSHOT</project.version>
+
         <spring-boot-starter-web.version>2.5.3</spring-boot-starter-web.version>
-        <mybatis-spring-boot-starter.version>2.2.0</mybatis-spring-boot-starter.version>
 
         <!-- plugins version start-->
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
@@ -35,47 +34,52 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <spring-boot-maven-plugin.version>2.4.4</spring-boot-maven-plugin.version>
         <!-- plugins version end-->
+
+        <yh.base.dependencies.version>1.0.0-SNAPSHOT</yh.base.dependencies.version>
+        <yh-infra-comp-parent.version>1.0.0-SNAPSHOT</yh-infra-comp-parent.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.yh.scaffold.demo.api</groupId>
+                <groupId>com.yh.scaffold</groupId>
                 <artifactId>yh-scaffold-springboot-api</artifactId>
-                <version>${yh-scaffold-springboot-api.version}</version>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yh.scaffold</groupId>
+                <artifactId>yh-scaffold-springboot-feign</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.yh.scaffold</groupId>
                 <artifactId>yh-scaffold-springboot-dao</artifactId>
-                <version>${yh-scaffold-springboot-dao.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql-connector.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring-boot-starter-web.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-spring-boot-starter.version}</version>
+                <groupId>com.yh.scaffold</groupId>
+                <artifactId>yh-scaffold-springboot-service</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
         </dependency>
     </dependencies>
 

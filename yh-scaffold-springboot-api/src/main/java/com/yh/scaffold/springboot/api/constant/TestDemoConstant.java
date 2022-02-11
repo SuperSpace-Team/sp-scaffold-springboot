@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @description:
- * @author: luchao
+ * @description: [示例]常量定义
+ * @author: ${USER}
  * @date: Created in 6/22/21 5:21 PM
  */
 public class TestDemoConstant {

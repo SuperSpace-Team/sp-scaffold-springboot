@@ -2,11 +2,12 @@ package com.yh.scaffold.springboot.api.enums;
 
 import com.yh.infra.common.base.BaseBizEnum;
 import com.yh.infra.common.exception.BusinessException;
+import com.yh.infra.common.exception.SystemException;
 
 import java.text.MessageFormat;
 
 /**
- * 业务枚举类(需按规范实现BaseBizEnum接口)
+ * [示例]自定义业务枚举类(需按规范实现BaseBizEnum接口)
  */
 public enum BusinessExceptionEnum implements BaseBizEnum {
     DUPLICATE_PARAM_A_ERROR(15010, "存在重复的参数A，请重新输入"),
@@ -17,26 +18,32 @@ public enum BusinessExceptionEnum implements BaseBizEnum {
     BusinessExceptionEnum(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
-        this.system = false;
+        this.systemException = false;
     }
 
-    BusinessExceptionEnum(Integer code, String msg, boolean system) {
+    BusinessExceptionEnum(Integer code, String msg, Boolean systemException) {
         this.code = code;
         this.msg = msg;
-        this.system = system;
-        if (isSystem()) {
-            this.msg = "[".concat(code.toString()).concat("] ").concat(msg);
+        this.systemException = systemException;
+        if (isSystemException()) {
+            this.msg = String.format("[%]%s", code.toString(), msg);
         }
     }
 
+    /**
+     * 返回码
+     */
     private Integer code;
 
+    /**
+     * 返回消息
+     */
     private String msg;
 
     /**
      * 是否为系统级别异常
      */
-    private boolean system;
+    private Boolean systemException;
 
     @Override
     public Integer getCode() {
@@ -48,8 +55,8 @@ public enum BusinessExceptionEnum implements BaseBizEnum {
         return msg;
     }
 
-    public boolean isSystem() {
-        return system;
+    public Boolean isSystemException() {
+        return systemException;
     }
 
     /**
@@ -58,8 +65,8 @@ public enum BusinessExceptionEnum implements BaseBizEnum {
      * @return
      */
     public RuntimeException toException() {
-        return system
-                ? new RuntimeException(msg)
+        return isSystemException()
+                ? new SystemException(msg)
                 : new BusinessException(code, msg);
     }
 
@@ -70,34 +77,34 @@ public enum BusinessExceptionEnum implements BaseBizEnum {
      * @return
      */
     public RuntimeException toException(Object... args) {
-        return system
-                ? new RuntimeException(msg)
+        return isSystemException()
+                ? new SystemException(msg)
                 : new BusinessException(code, MessageFormat.format(msg, args));
     }
 
     /**
-     * 执行异常
+     * 执行/触发异常
      *
      * @return
      */
     public void triggerException() {
-        if (system) {
-            throw new RuntimeException(msg);
-        } else {
-            throw new BusinessException(code, msg);
+        if (isSystemException()) {
+            throw new SystemException(msg);
         }
+
+        throw new BusinessException(code, msg);
     }
 
     /**
-     * 执行异常,异常载体支持变量
+     * 执行/触发异常(异常载体支持变量)
      *
      * @return
      */
     public void triggerException(Object... args) {
-        if (system) {
+        if (systemException) {
             throw new RuntimeException(String.format(msg, args));
-        } else {
-            throw new BusinessException(code, String.format(msg, args));
         }
+
+        throw new BusinessException(code, String.format(msg, args));
     }
 }

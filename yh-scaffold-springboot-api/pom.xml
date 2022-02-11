@@ -9,28 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yh.scaffold.demo.api</groupId>
     <artifactId>yh-scaffold-springboot-api</artifactId>
 
     <dependencies>
-        <!--自定义ORM框架-lark-->
-        <dependency>
-            <groupId>com.yh.common</groupId>
-            <artifactId>yh-lark-common</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-annotation</artifactId>
             <version>3.4.3.1</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-openfeign-core</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
+        </dependency>
+
+        <!--自定义ORM框架-lark-->
+        <dependency>
+            <groupId>com.yh.common</groupId>
+            <artifactId>yh-lark-common</artifactId>
         </dependency>
     </dependencies>
 

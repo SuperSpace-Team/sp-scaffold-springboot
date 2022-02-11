@@ -1,18 +1,18 @@
 package com.yh.scaffold.springboot.api.domain.vo;
 
-import com.yh.infra.common.dto.BaseResponseDTO;
-import com.yh.infra.common.vo.BasePageQueryRespVO;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 /**
- * @description: [示例]分页响应VO类定义
+ * @description: [示例]Demo业务1 VO定义
  * @author: ${USER}
- * @date: Created in 8/5/21 3:01 PM
+ * @date: Created in 8/4/21 10:17 PM
  */
 @Data
-public class DemoApiPageRespVO extends BasePageQueryRespVO {
+public class DemoBiz1VO {
     /**
      * 测试属性1
      */
@@ -47,4 +47,28 @@ public class DemoApiPageRespVO extends BasePageQueryRespVO {
      * 测试描述
      */
     private String description;
+
+    /**
+     * 用户信息VO对象
+     */
+    private UserInfo userInfo;
+
+    /**
+     * [示例]用户信息
+     */
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class UserInfo {
+        /**
+         * 用户ID
+         */
+
+        private Integer userId;
+
+        /**
+         * 用户编码
+         */
+        private String userCode;
+    }
 }

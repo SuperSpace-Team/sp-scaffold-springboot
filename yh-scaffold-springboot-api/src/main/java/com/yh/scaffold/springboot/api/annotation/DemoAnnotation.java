@@ -3,7 +3,7 @@ package com.yh.scaffold.springboot.api.annotation;
 import java.lang.annotation.*;
 
 /**
- * Demo自定义注解
+ * [示例]自定义注解
  */
 @Documented
 @Target(ElementType.METHOD)

@@ -59,7 +59,7 @@ spring:
           register: true
           service-name: app-${spring.application.name}-${spring.profiles.active}
       enabled: true
-      host: localhost
+      host: consul-dev.mid.io
       port: 8500
       retry:
           retryInterval: 60000

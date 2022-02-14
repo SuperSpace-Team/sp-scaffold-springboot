@@ -6,6 +6,7 @@ import com.yh.common.lark.common.dao.Pagination;
 import com.yh.common.lark.common.dao.Sort;
 import com.yh.common.lark.orm.dao.supports.BaseDao;
 import com.yh.scaffold.springboot.dao.po.DemoBizPO;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Map;
  * @author: ${USER}
  * @date: Created in 7/4/21 4:46 PM
  */
-@Repository
+@Component
 public interface BizDemo2Dao extends BaseDao<DemoBizPO, Long> {
     /**
      * 分页数据查询

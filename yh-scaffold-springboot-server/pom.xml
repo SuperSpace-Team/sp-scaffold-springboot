@@ -16,12 +16,6 @@
         <dependency>
             <groupId>com.yh.scaffold</groupId>
             <artifactId>yh-scaffold-springboot-service</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>mybatis-spring</artifactId>
-                    <groupId>org.mybatis</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>

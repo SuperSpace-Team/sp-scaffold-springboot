@@ -10,10 +10,10 @@
         <result column="name" property="name" />
         <result column="description" property="description" />
         <result column="is_delete" property="delete" />
-        <result column="creator_id" property="creatorId" />
+        <result column="created_by" property="createdBy" />
         <result column="created_at" property="createdAt" />
-        <result column="modifier_id" property="modifierId" />
-        <result column="modified_at" property="modifiedAt" />
+        <result column="updated_by" property="updatedBy" />
+        <result column="updated_at" property="updatedAt" />
     </resultMap>
 
     <select id="getTestDataList" resultMap="TestInfoMap">
@@ -40,10 +40,10 @@
             `name`,
             description,
             is_delete,
-            creator_id,
-            modifier_id,
+            created_by,
+            updated_by,
             created_at,
-            modified_at
+            updated_at
         ]]>
     </sql>
 

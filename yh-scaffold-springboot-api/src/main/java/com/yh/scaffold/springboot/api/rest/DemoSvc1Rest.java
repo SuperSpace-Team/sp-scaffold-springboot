@@ -20,7 +20,7 @@ public interface DemoSvc1Rest {
     ResponseVO<DemoApiPageRespVO> getTestPostPagingResult(@RequestBody BasePageQueryReqVO queryVO);
 
     @PostMapping("/test/save")
-    ResponseVO<Boolean> getTestGetResult(@RequestBody DemoBiz1VO reqVO);
+    ResponseVO<Boolean> saveData(@RequestBody DemoBiz1VO reqVO);
 
     @GetMapping("/test/plus/getByCode")
     ResponseVO<DemoApiPageRespVO> getPlusTest(@RequestParam("code") String code);

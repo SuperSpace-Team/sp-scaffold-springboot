@@ -12,8 +12,8 @@ import java.util.List;
  * @author: ${USER}
  * @date: Created in 8/4/21 8:41 PM
  */
-public interface DemoUserMapper extends BaseMapper<DemoBizPO> {
+public interface BizDemoMapper extends BaseMapper<DemoBizPO> {
 
-    List<DemoBizPO> plusTestGetByCode(@Param("code") String code);
+    List<DemoBizPO> queryWithMP(@Param("code") String code);
 
 }

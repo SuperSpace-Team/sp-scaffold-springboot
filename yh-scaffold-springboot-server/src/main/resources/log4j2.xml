@@ -3,8 +3,8 @@
     <properties>
         <!-- 文件输出格式 -->
         <property name="PATTERN">%d [%traceId] %-5p [%t] %c{1}:%L - %m%n</property>
-        <Property name="FILE_PATH">/data/log/k8s_${env:POD_NAME}_${env:ITWORK_ENV_CODE}_${env:HOST_IP}_${env:POD_IP}</Property>
-<!--        <Property name="FILE_PATH">/Users/luchao/Logs/scaffold</Property>-->
+<!--        <Property name="FILE_PATH">/data/log/k8s_${env:POD_NAME}_${env:ITWORK_ENV_CODE}_${env:HOST_IP}_${env:POD_IP}</Property>-->
+        <Property name="FILE_PATH">./logs</Property>
     </properties>
     <appenders>
         <Console name="CONSOLE" target="system_out">
@@ -34,10 +34,10 @@
         </RollingFile>
 
         <!-- 日志异步配置 -->
-        <Async name="infoAsync" blocking="false">
+        <Async name="infoAsync" blocking="false" includeLocation="true">
             <AppenderRef ref="runRollingFile"/>
         </Async>
-        <Async name="errorAsync" blocking="false">
+        <Async name="errorAsync" blocking="false" includeLocation="true">
             <AppenderRef ref="errorRollingFile"/>
         </Async>
     </appenders>

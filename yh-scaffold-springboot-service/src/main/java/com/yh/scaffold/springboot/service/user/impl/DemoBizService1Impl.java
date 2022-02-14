@@ -5,9 +5,10 @@ import com.yh.common.lark.common.dao.Pagination;
 import com.yh.common.lark.common.dao.Sort;
 import com.yh.infra.common.utils.bean.DozerUtil;
 import com.yh.infra.common.vo.BasePageQueryReqVO;
+import com.yh.scaffold.springboot.dao.repo.user.BizDemo1Dao;
+import com.yh.scaffold.springboot.dao.repo.user.BizDemo1Repository;
 import com.yh.scaffold.springboot.service.bo.DemoBiz1BO;
 import com.yh.scaffold.springboot.dao.po.DemoBizPO;
-import com.yh.scaffold.springboot.dao.repo.user.DemoUserRepositoryImpl;
 import com.yh.scaffold.springboot.service.base.BaseBizServiceImpl;
 import com.yh.scaffold.springboot.service.user.DemoBizService1;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,10 @@ import java.util.Map;
 @Service
 public class DemoBizService1Impl extends BaseBizServiceImpl<Long, DemoBiz1BO> implements DemoBizService1 {
     @Autowired
-    DemoUserRepositoryImpl demoBizRepository;
+    BizDemo1Repository demoBizRepository;
+
+    @Autowired
+    BizDemo1Dao bizDemo1Dao;
 
     @Override
     public Boolean save(DemoBiz1BO bizBO) {
@@ -43,7 +47,7 @@ public class DemoBizService1Impl extends BaseBizServiceImpl<Long, DemoBiz1BO> im
     public Pagination<DemoBiz1BO> query(Page page, Map<String, Object> param) {
         Sort[] sorts = new Sort[1];
         sorts[0] = new Sort("modified_at", "DESC");
-        return DozerUtil.map(demoBizRepository.getRepository().findListByQueryMapWithPage(page, sorts, param), Pagination.class);
+        return DozerUtil.map(bizDemo1Dao.findListByQueryMapWithPage(page, sorts, param), Pagination.class);
     }
 
     /**
@@ -64,12 +68,12 @@ public class DemoBizService1Impl extends BaseBizServiceImpl<Long, DemoBiz1BO> im
      */
     @Override
     public Pagination<DemoBiz1BO> getPageDataList(BasePageQueryReqVO basePageQueryVO) {
-        return DozerUtil.map(demoBizRepository.getRepository().findListByQueryMapWithPage(basePageQueryVO.getPage(),
+        return DozerUtil.map(bizDemo1Dao.findListByQueryMapWithPage(basePageQueryVO.getPage(),
                 basePageQueryVO.getSorts(), basePageQueryVO.getParams()), Pagination.class);
     }
 
     @Override
     public List<DemoBiz1BO> plusTestGetByCode(String code) {
-        return DozerUtil.mapList(demoBizRepository.plusTestGetByCode(code), DemoBiz1BO.class);
+        return DozerUtil.mapList(demoBizRepository.queryWithMP(code), DemoBiz1BO.class);
     }
 }

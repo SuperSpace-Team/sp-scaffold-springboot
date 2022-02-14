@@ -84,6 +84,23 @@ yh:
   service1:
     name: ${spring.application.name}
     url: ~
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  type-aliases-package: com.yh.scaffold.springboot.dao.mapper
+  global-config:
+    db-config:
+      id-type: AUTO
+      insert-strategy: not_empty
+      update-strategy: not_empty
+      select-strategy: not_empty
+      # db前缀 如：arch.upload_form
+    #      table-prefix: arch
+    banner: false
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    jdbc-type-for-null: null
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
 

@@ -1,9 +1,10 @@
 package com.yh.scaffold.springboot.service.user.impl;
 
 import com.yh.infra.common.utils.bean.DozerUtil;
+import com.yh.scaffold.springboot.dao.repo.role.BizDemo2Dao;
+import com.yh.scaffold.springboot.dao.repo.role.BizDemo2Repository;
 import com.yh.scaffold.springboot.service.bo.DemoBiz2BO;
 import com.yh.scaffold.springboot.dao.po.DemoBizPO;
-import com.yh.scaffold.springboot.dao.repo.user.DemoUserRepositoryImpl;
 import com.yh.scaffold.springboot.service.base.BaseBizServiceImpl;
 import com.yh.scaffold.springboot.service.user.DemoBizService2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class DemoBizService2Impl extends BaseBizServiceImpl<Long, DemoBiz2BO> implements DemoBizService2 {
     @Autowired
-    DemoUserRepositoryImpl demoBizRepository;
+    BizDemo2Repository demoBizRepository;
+
+    @Autowired
+    BizDemo2Dao bizDemo2Dao;
 
     /**
      * 普通方法示例

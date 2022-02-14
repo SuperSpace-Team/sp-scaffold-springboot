@@ -1,29 +1,14 @@
 package com.yh.scaffold.springboot.dao.repo.base;
 
-import com.yh.common.lark.common.annotation.QueryPage;
-import com.yh.common.lark.common.dao.Page;
-import com.yh.common.lark.common.dao.Pagination;
-import com.yh.common.lark.common.dao.Sort;
-import com.yh.common.lark.orm.dao.supports.BaseDao;
-import org.springframework.stereotype.Repository;
-
-import java.util.Map;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 /**
- * @description: 基础DAO操作仓储接口
- * 集成lark ORM框架
+ * @description: 【非必需】公共仓储实现类
+ * 兼容集成Mybatis-Plus框架基类方法
  * @author: ${USER}
- * @date: Created in 7/4/21 4:46 PM
+ * @date: Created in 7/4/21 8:07 PM
  */
-@Repository
-public interface BaseBizRepository<ET, PT> extends BaseDao<ET, PT> {
-    /**
-     * 分页数据查询
-     * @param page
-     * @param sorts
-     * @param params
-     * @return
-     */
-    @QueryPage("findListWithPageCount")
-    Pagination<ET> findListByQueryMapWithPage(Page page, Sort[] sorts, Map<String, Object> params);
+public abstract class BaseBizRepository<MP extends BaseMapper<PO>, PO> extends ServiceImpl<MP, PO> {
+
 }

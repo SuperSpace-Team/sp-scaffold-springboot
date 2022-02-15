@@ -12,10 +12,7 @@ import com.yh.scaffold.springboot.api.rest.DemoSvc1Rest;
 import com.yh.scaffold.springboot.service.user.DemoBizService1;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
 
 /**
  * @description: [示例]测试业务API
@@ -48,7 +45,7 @@ public class DemoSvc1Controller implements DemoSvc1Rest {
     @Override
     @PostMapping("/test/postPagingResult")
     @ApiOperation("[示例]获取分页查询结果数据")
-    public ResponseVO<DemoApiPageRespVO> getTestPostPagingResult(@RequestBody BasePageQueryReqVO queryVO){
+    public ResponseVO getTestPostPagingResult(@RequestBody BasePageQueryReqVO queryVO){
         Pagination<DemoApiPageRespVO> demoApiPagingRespVO =
                 DozerUtil.map(demoBizService1.getPageDataList(queryVO), Pagination.class);
         //process sth...

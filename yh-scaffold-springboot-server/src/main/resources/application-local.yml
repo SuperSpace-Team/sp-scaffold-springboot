@@ -82,7 +82,7 @@ spring:
     name: yh-app-template
 yh:
   service1:
-    name: ${spring.application.name}
+    name: user-center
     url: ~
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml

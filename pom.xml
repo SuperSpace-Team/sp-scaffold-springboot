@@ -25,18 +25,6 @@
 
     <properties>
         <project.version>1.0.0-SNAPSHOT</project.version>
-
-        <spring-boot-starter-web.version>2.5.3</spring-boot-starter-web.version>
-
-        <!-- plugins version start-->
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <spring-boot-maven-plugin.version>2.4.4</spring-boot-maven-plugin.version>
-        <!-- plugins version end-->
-
-        <yh.base.dependencies.version>1.0.0-SNAPSHOT</yh.base.dependencies.version>
-        <yh-infra-comp-parent.version>1.0.0-SNAPSHOT</yh-infra-comp-parent.version>
     </properties>
 
     <dependencyManagement>
@@ -65,17 +53,10 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--基础组件核心包-->
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
+            <groupId>com.yh.infra.comp</groupId>
+            <artifactId>yh-infra-comp-logger</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>

@@ -11,7 +11,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * 启动类
  *
- * @author luchao
+ * @author ${USER}
  * @date 2020/7/2
  */
 @SpringBootApplication(scanBasePackages = {"com.yh.scaffold.springboot", "com.yh.infra.comp", "com.baomidou", "com.yh.infra"})

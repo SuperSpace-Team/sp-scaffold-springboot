@@ -3,8 +3,8 @@
     <properties>
         <!-- 文件输出格式 -->
         <property name="PATTERN">%d [%traceId] %-5p [%t] %c{1}:%L - %m%n</property>
-<!--        <Property name="FILE_PATH">/data/log/k8s_${env:POD_NAME}_${env:ITWORK_ENV_CODE}_${env:HOST_IP}_${env:POD_IP}</Property>-->
-        <Property name="FILE_PATH">./logs</Property>
+        <Property name="FILE_PATH">/data/log/k8s_${env:POD_NAME}_${env:ITWORK_ENV_CODE}_${env:HOST_IP}_${env:POD_IP}</Property>
+<!--        本地测试使用:<Property name="FILE_PATH">./logs</Property>-->
     </properties>
     <appenders>
         <Console name="CONSOLE" target="system_out">
@@ -15,7 +15,7 @@
                      fileName="${FILE_PATH}/exception.log"
                      filePattern="${FILE_PATH}/exception_%d{yyyy-MM-dd}-%i.log">
             <SizeBasedTriggeringPolicy size="500MB" />
-            <!-- DefaultRolloverStrategy 属性如不设置，则默认为最多同一文件夹下 7 个文件，这里设置了 10 -->
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了10 -->
             <DefaultRolloverStrategy max="10" />
             <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY" />
             <PatternLayout pattern="${PATTERN}"/>

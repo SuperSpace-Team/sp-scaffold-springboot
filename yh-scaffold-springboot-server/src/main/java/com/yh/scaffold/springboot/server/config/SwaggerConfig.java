@@ -11,8 +11,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * 【示例】API定义信息配置
- * Docket可定义多个
+ * @description: 【示例】API定义信息配置(Docket可定义多个)
+ * @author: ${USER}
+ * @date: Created in 10/27/21 8:01 PM
  */
 @Configuration
 @EnableSwagger2

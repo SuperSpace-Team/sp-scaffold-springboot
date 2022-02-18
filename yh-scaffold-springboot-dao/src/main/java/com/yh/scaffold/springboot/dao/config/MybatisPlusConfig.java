@@ -16,7 +16,7 @@ import java.lang.reflect.Field;
 
 /**
  * @description: Mybatis-Plus相关配置
- * @author: ${USER}
+ * @author: admin
  * @date: Created in 10/27/21 8:01 PM
  */
 @Configuration

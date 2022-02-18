@@ -18,7 +18,7 @@ import java.util.List;
  * 用于放置可复用代码,适合大部分的ServiceImpl,但也有少数ServiceImpl需要进行定制,KEY不一定是表的ID,
  * 一般是业务编码或具有联合主键的属性/字段,所以需要定制化getModelByCode.
  *
- * @author: ${USER}
+ * @author: admin
  * @date: Created in 8/4/21 10:05 PM
  */
 @Slf4j

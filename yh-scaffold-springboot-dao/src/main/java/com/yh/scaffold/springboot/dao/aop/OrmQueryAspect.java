@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @description: ORM查询切面
- * @author: ${USER}
+ * @author: admin
  * @date: Created in 10/27/21 8:01 PM
  */
 @Aspect

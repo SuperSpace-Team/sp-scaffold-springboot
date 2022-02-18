@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * @description: Feign调用接口定义
- * @author: ${USER}
+ * @author: {{USER}}
  * @date: Created in 10/27/21 7:58 PM
  */
 @FeignClient(name = "${yh.service1.name:scaffold-application}", url="${yh.service1.url:}")

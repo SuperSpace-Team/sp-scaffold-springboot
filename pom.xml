@@ -17,6 +17,7 @@
         <module>yh-scaffold-springboot-server</module>
     </modules>
 
+    <!-- 依赖基础组件工具集(包含常用二方库、开源组件包父POM声明集yh-base-dependencies) -->
     <parent>
         <groupId>com.yh.infra.comp</groupId>
         <artifactId>yh-infra-comp-parent</artifactId>

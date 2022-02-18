@@ -3,8 +3,9 @@
     <properties>
         <!-- 文件输出格式 -->
         <property name="PATTERN">%d [%traceId] %-5p [%t] %c{1}:%L - %m%n</property>
-        <Property name="FILE_PATH">/data/log/k8s_${env:POD_NAME}_${env:ITWORK_ENV_CODE}_${env:HOST_IP}_${env:POD_IP}</Property>
-<!--        本地测试使用:<Property name="FILE_PATH">./logs</Property>-->
+<!--        <Property name="FILE_PATH">/data/log/k8s_${env:POD_NAME}_${env:ITWORK_ENV_CODE}_${env:HOST_IP}_${env:POD_IP}</Property>-->
+<!--        本地测试可使用如下当前路径-->
+        <Property name="FILE_PATH">./logs</Property>
     </properties>
     <appenders>
         <Console name="CONSOLE" target="system_out">
@@ -24,8 +25,7 @@
         <RollingFile name="runRollingFile"
                      fileName="${FILE_PATH}/run.log" filePattern="${FILE_PATH}/run_%d{yyyy-MM-dd}-%i.log">
             <SizeBasedTriggeringPolicy size="500MB" />
-            <!-- DefaultRolloverStrategy 属性如不设置，则默认为最多同一文件夹
-           下 7 个文件，这里设置了 10 -->
+            <!-- DefaultRolloverStrategy 属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了 10 -->
             <DefaultRolloverStrategy max="10" />
             <Filters>
                 <ThresholdFilter level="FATAL" onMatch="DENY" onMismatch="NEUTRAL"/>

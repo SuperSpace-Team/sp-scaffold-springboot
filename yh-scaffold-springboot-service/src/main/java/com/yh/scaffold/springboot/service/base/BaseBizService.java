@@ -1,7 +1,7 @@
 package com.yh.scaffold.springboot.service.base;
 
 /**
- * @description: [推荐,非必须]基础业务Service方法定义
+ * @description: [推荐,非必须]基础业务接口定义
  * @author: admin
  * @date: Created in 8/4/21 10:02 PM
  */

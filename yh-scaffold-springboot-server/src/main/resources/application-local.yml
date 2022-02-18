@@ -1,5 +1,5 @@
 server:
-  port: 8111
+  port: 8100
   tomcat:
     accept-count: 10000
     connection-timeout: 10000
@@ -81,8 +81,8 @@ spring:
   project:
     name: yh-app-template
 yh:
-  service1:
-    name: user-center
+  role-service:
+    name: role-service
     url: ~
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml
@@ -93,8 +93,6 @@ mybatis-plus:
       insert-strategy: not_empty
       update-strategy: not_empty
       select-strategy: not_empty
-      # db前缀 如：arch.upload_form
-    #      table-prefix: arch
     banner: false
   configuration:
     map-underscore-to-camel-case: true

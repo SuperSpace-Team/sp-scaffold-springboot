@@ -9,19 +9,19 @@ import java.text.MessageFormat;
 /**
  * [示例]自定义业务枚举类(需按规范实现BaseBizEnum接口)
  */
-public enum BusinessExceptionEnum implements BaseBizEnum {
+public enum BusinessErrorCodeEnum implements BaseBizEnum {
     DUPLICATE_PARAM_A_ERROR(15010, "存在重复的参数A，请重新输入"),
     NOT_FOUND_SOME_CONFIG_DATA(15012, "找不到某个配置数据,请确认!"),
     MODIFY_SOME_DATA_FAILED(15013, "修改某条数据失败,请重试!"),
     SOME_PARAM_CANNOT_BE_EMPTY(15015, "某个参数xxx不能为空");
 
-    BusinessExceptionEnum(Integer code, String msg) {
+    BusinessErrorCodeEnum(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
         this.systemException = false;
     }
 
-    BusinessExceptionEnum(Integer code, String msg, Boolean systemException) {
+    BusinessErrorCodeEnum(Integer code, String msg, Boolean systemException) {
         this.code = code;
         this.msg = msg;
         this.systemException = systemException;

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @description: [示例]业务操作仓储接口【本文件初版代码可通过代码生成器生成】
+ * @description: [示例]业务操作仓储类【本文件初版代码可通过代码生成器生成】
  * @author: ${USER}
  * @date: Created in 8/4/21 10:07 PM
  */

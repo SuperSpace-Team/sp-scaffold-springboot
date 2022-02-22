@@ -11,10 +11,6 @@
 
     <artifactId>yh-scaffold-springboot-service</artifactId>
 
-    <properties>
-        <yh-infra-comp-core.version>1.0.0-SNAPSHOT</yh-infra-comp-core.version>
-    </properties>
-
     <dependencies>
         <!--依赖DAO层-->
         <dependency>
@@ -26,6 +22,16 @@
         <dependency>
             <groupId>com.yh.infra.comp</groupId>
             <artifactId>yh-infra-comp-core</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>logback-core</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>logback-classic</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--基础组件Apollo客户端-->
         <dependency>

@@ -5,12 +5,18 @@ import com.yh.infra.common.utils.ResponseUtil;
 import com.yh.infra.common.utils.bean.DozerUtil;
 import com.yh.infra.common.vo.BasePageQueryReqVO;
 import com.yh.infra.common.vo.ResponseVO;
+import com.yh.infra.comp.core.annotation.ApiResponseConversion;
+import com.yh.infra.comp.core.enums.AdaptTypeEnum;
+import com.yh.infra.comp.core.model.Resp;
+import com.yh.infra.comp.core.model.WebResult;
 import com.yh.scaffold.springboot.service.bo.DemoBiz1BO;
 import com.yh.scaffold.springboot.api.domain.vo.DemoApiPageRespVO;
 import com.yh.scaffold.springboot.api.domain.vo.DemoBiz1VO;
 import com.yh.scaffold.springboot.api.rest.DemoSvc1Rest;
 import com.yh.scaffold.springboot.service.user.DemoBizService1;
+import com.yonghui.core.utils.R;
 import io.swagger.annotations.*;
+import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -77,5 +83,32 @@ public class DemoSvc1Controller implements DemoSvc1Rest {
                                                      @ApiParam(name = "code", value = "测试编码", required = true)
                                                                  String code){
         return ResponseUtil.getResponse(demoBizService1.plusTestGetByCode(code));
+    }
+
+    @GetMapping("/convert")
+    @ApiResponseConversion(adaptType = AdaptTypeEnum.R)
+    public ResponseVO<DemoBiz1VO> testConvert(){
+        DemoBiz1VO biz1VO = new DemoBiz1VO();
+        biz1VO.setCode("afsfd");
+        biz1VO.setDescription("ffwfedesc");
+        return ResponseUtil.getFromData(biz1VO);
+    }
+
+    @GetMapping("/convert2")
+    @ApiResponseConversion(adaptType = AdaptTypeEnum.R)
+    public R<DemoBiz1VO> testConvert2(){
+        DemoBiz1VO biz1VO = new DemoBiz1VO();
+        biz1VO.setCode("afsfd");
+        biz1VO.setDescription("ffwfedesc");
+        return R.success(biz1VO);
+    }
+
+    @GetMapping("/convert3")
+    @ApiResponseConversion(adaptType = AdaptTypeEnum.WebResult)
+    public WebResult<DemoBiz1VO> testConvert3(){
+        DemoBiz1VO biz1VO = new DemoBiz1VO();
+        biz1VO.setCode("etttt");
+        biz1VO.setDescription("ggggg");
+        return WebResult.ok(biz1VO);
     }
 }

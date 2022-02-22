@@ -96,6 +96,11 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--git代码提交记录插件-->
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
 </project>

@@ -4,17 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yh.scaffold</groupId>
-    <artifactId>yh-scaffold-springboot-parent</artifactId>
+    <groupId>{{package}}</groupId>
+    <artifactId>{{service.code}}</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
+    <description>{{service.code}} project</description>
 
     <modules>
-        <module>yh-scaffold-springboot-feign</module>
-        <module>yh-scaffold-springboot-api</module>
-        <module>yh-scaffold-springboot-dao</module>
-        <module>yh-scaffold-springboot-service</module>
-        <module>yh-scaffold-springboot-server</module>
+        <module>{{service.code.lower}}-feign</module>
+        <module>{{service.code.lower}}-api</module>
+        <module>{{service.code.lower}}-dao</module>
+        <module>{{service.code.lower}}-service</module>
+        <module>{{service.code.lower}}-server</module>
     </modules>
 
     <!-- 依赖基础组件工具集(包含常用二方库、开源组件包父POM声明集yh-base-dependencies) -->

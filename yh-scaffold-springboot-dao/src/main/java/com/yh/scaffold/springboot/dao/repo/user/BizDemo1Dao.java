@@ -26,6 +26,6 @@ public interface BizDemo1Dao extends BaseDao<DemoBizPO, Long> {
      * @param params
      * @return
      */
-    @QueryPage("findListWithPageCount")
+    @QueryPage("findListCountByQueryMap")
     Pagination<DemoBizPO> findListByQueryMapWithPage(Page page, Sort[] sorts, Map<String, Object> params);
 }

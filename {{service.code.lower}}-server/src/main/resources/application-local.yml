@@ -39,7 +39,7 @@ spring:
       connection-timeout: 6000
       maxIdleTime: 60
   application:
-    name: yh-scaffold-springboot-parent
+    name: {{service.code.lower}}-parent
   main:
       allow-bean-definition-overriding: true
   cloud:

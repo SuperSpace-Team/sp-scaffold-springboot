@@ -39,7 +39,7 @@
 
 ## 工程结构(多模块详细包)说明
 
-    yh-scaffold-springboot-parent      服务名称,格式：yh-项目名-服务名
+    {{service.code.lower}}-parent      服务名称,格式：yh-项目名-服务名
     │
     └─{{package}}.api               包命名：com.yh.服务名.api,微服务对外暴露的接口和域传输对象定义等,调用方依赖此包、功能酌情使用 
     │  ├─rest                       对外暴露的接口(调用方定义FeignClient类实现接口即可)

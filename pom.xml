@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>{{package}}</groupId>
+    <groupId>com.yonghui</groupId>
     <artifactId>{{service.code}}</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
@@ -32,23 +32,23 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.yh.scaffold</groupId>
-                <artifactId>yh-scaffold-springboot-api</artifactId>
+                <groupId>com.yonghui</groupId>
+                <artifactId>{{service.code.lower}}-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yh.scaffold</groupId>
-                <artifactId>yh-scaffold-springboot-feign</artifactId>
+                <groupId>com.yonghui</groupId>
+                <artifactId>{{service.code.lower}}-feign</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yh.scaffold</groupId>
-                <artifactId>yh-scaffold-springboot-dao</artifactId>
+                <groupId>com.yonghui</groupId>
+                <artifactId>{{service.code.lower}}-dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yh.scaffold</groupId>
-                <artifactId>yh-scaffold-springboot-service</artifactId>
+                <groupId>com.yonghui</groupId>
+                <artifactId>{{service.code.lower}}-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

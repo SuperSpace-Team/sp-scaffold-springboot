@@ -14,16 +14,16 @@
 <!--            <property name="forceBigDecimals" value="false"/>-->
 <!--        </javaTypeResolver>-->
 <!--        &lt;!&ndash; 实体类生成的位置 &ndash;&gt;-->
-<!--        <javaModelGenerator targetPackage="com.yh.scaffold.springboot.dao.repository.po" targetProject="yh-scaffold-springboot-dao/src/main/java">-->
+<!--        <javaModelGenerator targetPackage="{{package}}.dao.repository.po" targetProject="{{service.code.lower}}-dao/src/main/java">-->
 <!--            <property name="enableSubPackages" value="false"/>-->
 <!--            <property name="trimStrings" value="true"/>-->
 <!--        </javaModelGenerator>-->
 <!--        &lt;!&ndash; *Mapper.xml 文件的位置 &ndash;&gt;-->
-<!--        <sqlMapGenerator targetPackage="mapper" targetProject="yh-scaffold-springboot-dao/src/main/resources/mapper">-->
+<!--        <sqlMapGenerator targetPackage="mapper" targetProject="{{service.code.lower}}-dao/src/main/resources/mapper">-->
 <!--            <property name="enableSubPackages" value="false"/>-->
 <!--        </sqlMapGenerator>-->
 <!--        &lt;!&ndash; Mapper 接口文件的位置 &ndash;&gt;-->
-<!--        <javaClientGenerator targetPackage="com.yh.scaffold.springboot.dao.mapper" targetProject="yh-scaffold-springboot-dao/src/main/java" type="XMLMAPPER">-->
+<!--        <javaClientGenerator targetPackage="{{package}}.dao.mapper" targetProject="{{service.code.lower}}-dao/src/main/java" type="XMLMAPPER">-->
 <!--            <property name="enableSubPackages" value="false"/>-->
 <!--        </javaClientGenerator>-->
 <!--        &lt;!&ndash; 相关表的配置 &ndash;&gt;-->

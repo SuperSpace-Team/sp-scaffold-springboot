@@ -41,7 +41,7 @@
 
     {{service.code.lower}}-parent      服务名称,格式：yh-项目名-服务名
     │
-    └─{{package}}.api               包命名：com.yh.服务名.api,微服务对外暴露的接口和域传输对象定义等,调用方依赖此包、功能酌情使用 
+    └─{{package}}.api               包命名：com.yonghui.服务名.api,微服务对外暴露的接口和域传输对象定义等,调用方依赖此包、功能酌情使用 
     │  ├─rest                       对外暴露的接口(调用方定义FeignClient类实现接口即可)
     │  ├─domain                     域传输对象定义
     │  │ │─vo                       视图对象(前端交互时使用)
@@ -52,18 +52,18 @@
     │  ├─exception                  异常【非必须】
     │  └─utils                      工具类【非必须】
     │
-    └─{{package}}.server            包命名：com.yh.服务名.server,工程启动模块,包括Controller层定义、Web全局配置等
+    └─{{package}}.server            包命名：com.yonghui.服务名.server,工程启动模块,包括Controller层定义、Web全局配置等
     │    ├─config                   Web全局配置
     │    │  └─SwaggerConfig.java    Swagger相关配置
     │    ├─controller               控制器定义(统一以@RestController声明)
     │    └─YhApp.java               服务启动类【类名可自定义】
-    └─{{package}}.feign             包命名：com.yh.服务名.feign,调用其它服务的Feign接口定义模块
+    └─{{package}}.feign             包命名：com.yonghui.服务名.feign,调用其它服务的Feign接口定义模块
     │    ├─client                   FeignClient目标调用接口定义(@FeignClient注解中的name、value和url建议定义到配置文件中)
     │    │  └─[role]                子包目录,调用目标业务服务名称
     │    ├─fallback                 FeignClient的降级逻辑实现(建议返回自定义错误或固定的SystemErrorCodeEnum.BUSINESS_ERROR或SYSTEM_ERROR或SYSTEM_UNKNOWN_EXCEPTION提示信息)
     │    └─vo                       Feign调用使用的VO(视图对象)定义
     │
-    └─{{package}}.service           包命名：com.yh.服务名.service,业务逻辑层,包括各业务Service接口定义和逻辑方法实现、BO(业务POJO类)定义等
+    └─{{package}}.service           包命名：com.yonghui.服务名.service,业务逻辑层,包括各业务Service接口定义和逻辑方法实现、BO(业务POJO类)定义等
     │    ├─base                     [推荐,非必须]
     │    │  ├─BaseBizService.java   基础业务Service接口定义(可酌情不使用)
     │    │  ├─BaseBizServiceImpl.java   基础业务实现类(可酌情不使用)
@@ -72,7 +72,7 @@
     │    ├─[user]                   子包目录,存放业务服务Service接口
     │    │  └─impl                  存放ServiceImpl实现类,业务Service接口方法逻辑实现
     │
-    └─{{package}}.dao               包命名：com.yh.服务名.dao,数据持久层
+    └─{{package}}.dao               包命名：com.yonghui.服务名.dao,数据持久层
     │    ├─aop                      业务聚合类方法逻辑实现
     │    ├─po                       PO(数据库实体POJO类)
     │    ├─mapper                   数据持久层Mapper接口定义(继承MP框架的BaseMapper<T>)
@@ -198,14 +198,15 @@ spring:
     PRIMARY KEY (`id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+#### 一般来说，id,version,is_delete,created_by,created_at,updated_by,updated_at这些为公共字段，对应BasePO、定义数据库实体类的时候可以继承。
+
 ## 开发规范
 ### 分层领域模型规约：
 
     * PO（ORM Entity Object）：持久化实体，与数据库表结构一一对应，通过 DAO 层向上传输数据源对象。
-    * DTO（Data Transfer Object）：数据传输对象，Service 和 Manager 向外传输的对象。
+    * DTO（Data Transfer Object）：数据传输对象，Service 和 Manager 向外传输的对象，或Feign/RPC服务间调用时使用。
     * BO（Business Object）：业务对象。可以由 Service 层输出的封装业务逻辑的对象。
-    * Query：数据查询对象，各层接收上层的查询请求。注：超过 2 个参数的查询封装，禁止
-      使用 Map 类来传输。
+    * Query：数据查询对象，各层接收上层的查询请求。注：超过 2 个参数的查询封装，禁止使用 Map 类来传输。
     * VO（View Object）：显示层对象，通常是 Web 向模板渲染引擎层传输的对象。 
 
 ### 安全规约

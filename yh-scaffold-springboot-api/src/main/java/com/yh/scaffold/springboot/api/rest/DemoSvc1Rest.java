@@ -4,6 +4,7 @@ import com.yh.infra.common.vo.BasePageQueryReqVO;
 import com.yh.infra.common.vo.ResponseVO;
 import com.yh.scaffold.springboot.api.domain.vo.DemoApiPageRespVO;
 import com.yh.scaffold.springboot.api.domain.vo.DemoBiz1VO;
+import com.yh.scaffold.springboot.api.domain.vo.DemoPlusTestResp;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -23,5 +24,5 @@ public interface DemoSvc1Rest {
     ResponseVO<Boolean> saveData(@RequestBody DemoBiz1VO reqVO);
 
     @GetMapping("/test/plus/getByCode")
-    ResponseVO<DemoApiPageRespVO> getPlusTest(@RequestParam("code") String code);
+    ResponseVO<DemoPlusTestResp> getPlusTest(@RequestParam("code") String code);
 }

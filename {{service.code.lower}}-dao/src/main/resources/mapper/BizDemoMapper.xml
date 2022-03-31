@@ -16,8 +16,8 @@
         <result column="updated_at" property="updatedAt" />
     </resultMap>
 
-    <select id="plusTestGetByCode" resultMap="TestInfoMap">
-        select code from test_1 where code like concat('%',#{code},'%')
+    <select id="queryWithMP" resultMap="TestInfoMap">
+        select code,'name',description from test_1 where code like concat('%',#{code},'%')
     </select>
 
 </mapper>

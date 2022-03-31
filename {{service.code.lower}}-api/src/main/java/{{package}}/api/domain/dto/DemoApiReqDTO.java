@@ -29,5 +29,5 @@ public class DemoApiReqDTO extends BaseRequestDTO {
     /**
      * 测试属性4
      */
-    private com.yh.scaffold.springboot.api.domain.dto.MyBizReqDTO testProperty4;
+    private MyBizReqDTO testProperty4;
 }

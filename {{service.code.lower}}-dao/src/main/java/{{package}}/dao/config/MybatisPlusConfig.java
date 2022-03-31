@@ -19,7 +19,7 @@ import java.lang.reflect.Field;
  */
 @Configuration
 @EnableTransactionManagement
-@MapperScan(basePackages = {"com.yh.scaffold.springboot.dao"})
+@MapperScan(basePackages = {"{{package}}.dao"})
 public class MybatisPlusConfig {
     /**
      * 配置MybatisPlus原生分页插件

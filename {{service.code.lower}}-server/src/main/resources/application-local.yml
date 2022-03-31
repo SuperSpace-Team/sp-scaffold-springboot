@@ -86,7 +86,7 @@ yh:
     url: ~
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml
-  type-aliases-package: com.yh.scaffold.springboot.dao.mapper
+  type-aliases-package: {{package}}.dao.mapper
   global-config:
     db-config:
       id-type: AUTO

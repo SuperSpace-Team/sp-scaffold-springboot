@@ -14,7 +14,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @author ${USER}
  * @date 2020/7/2
  */
-@SpringBootApplication(scanBasePackages = "{{package}}", "com.yh.infra.comp", "com.baomidou", "com.yh.infra"})
+@SpringBootApplication(scanBasePackages = { "{{package}}", "com.yh.infra.comp", "com.baomidou", "com.yh.infra"})
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableApolloConfig

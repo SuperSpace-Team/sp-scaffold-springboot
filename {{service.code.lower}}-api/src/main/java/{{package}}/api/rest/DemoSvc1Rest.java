@@ -3,6 +3,7 @@ package {{package}}.api.rest;
 import com.yh.infra.common.vo.BasePageQueryReqVO;
 import com.yh.infra.common.vo.ResponseVO;
 import {{package}}.api.domain.vo.DemoApiPageRespVO;
+import {{package}}.api.domain.vo.DemoPlusTestResp;
 import {{package}}.api.domain.vo.DemoBiz1VO;
 import org.springframework.web.bind.annotation.*;
 

@@ -76,8 +76,6 @@ spring:
       httpclient:
         pool:
           maxIdleTime: 10000
-  profiles:
-    active: local
   project:
     name: yh-app-template
 yh:

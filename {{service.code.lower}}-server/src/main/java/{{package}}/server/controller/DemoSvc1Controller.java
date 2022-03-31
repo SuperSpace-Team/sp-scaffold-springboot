@@ -10,6 +10,7 @@ import com.yh.infra.comp.core.enums.AdaptTypeEnum;
 import com.yh.infra.comp.core.model.WebResult;
 import {{package}}.service.bo.DemoBiz1BO;
 import {{package}}.api.domain.vo.DemoApiPageRespVO;
+import {{package}}.api.domain.vo.DemoPlusTestResp;
 import {{package}}.api.domain.vo.DemoBiz1VO;
 import {{package}}.api.rest.DemoSvc1Rest;
 import {{package}}.service.user.DemoBizService1;
@@ -77,10 +78,11 @@ public class DemoSvc1Controller implements DemoSvc1Rest {
     @Override
     @GetMapping("/test/plus/getByCode")
     @ApiOperation("[示例]获取普通查询结果")
-    public ResponseVO<DemoApiPageRespVO> getPlusTest(@RequestParam("code")
-                                                     @ApiParam(name = "code", value = "测试编码", required = true)
-                                                                 String code){
-        return ResponseUtil.getResponse(demoBizService1.plusTestGetByCode(code));
+    public ResponseVO<DemoPlusTestResp> getPlusTest(@RequestParam("code")
+                                                    @ApiParam(name = "code", value = "测试编码", required = true)
+                                                            String code){
+        return ResponseUtil.getResponse(
+                new DemoPlusTestResp(DozerUtil.mapList(demoBizService1.plusTestGetByCode(code), DemoBiz1VO.class)));
     }
 
     @GetMapping("/convert")

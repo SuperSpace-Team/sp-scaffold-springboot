@@ -14,7 +14,7 @@ import java.util.List;
  * @date: Created in 8/4/21 10:07 PM
  */
 @Repository
-public class BizDemo2Repository extends BaseBizRepository<BizDemoMapper, com.yh.scaffold.springboot.dao.po.DemoBizPO> {
+public class BizDemo2Repository extends BaseBizRepository<BizDemoMapper, DemoBizPO> {
     @Autowired
     private BizDemo2Dao bizDemoDao;
 
@@ -26,8 +26,8 @@ public class BizDemo2Repository extends BaseBizRepository<BizDemoMapper, com.yh.
      * @param code
      * @return
      */
-    public List<com.yh.scaffold.springboot.dao.po.DemoBizPO> queryWithLarkDao(String code){
-        com.yh.scaffold.springboot.dao.po.DemoBizPO criteria = new com.yh.scaffold.springboot.dao.po.DemoBizPO();
+    public List<DemoBizPO> queryWithLarkDao(String code){
+        DemoBizPO criteria = new DemoBizPO();
         criteria.setCode(code);
         return bizDemoDao.findListByParam(criteria);
     }
@@ -37,7 +37,7 @@ public class BizDemo2Repository extends BaseBizRepository<BizDemoMapper, com.yh.
      * @param code
      * @return
      */
-    public List<com.yh.scaffold.springboot.dao.po.DemoBizPO> queryWithMP(String code){
+    public List<DemoBizPO> queryWithMP(String code){
         return demoBizMapper.queryWithMP(code);
     }
 

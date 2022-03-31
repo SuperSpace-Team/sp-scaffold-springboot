@@ -1,4 +1,4 @@
-package com.yh.scaffold.springboot.dao.po;
+package {{package}}.dao.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.yh.infra.common.base.BasePO;

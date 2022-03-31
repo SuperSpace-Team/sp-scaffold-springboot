@@ -23,5 +23,5 @@ public interface DemoSvc1Rest {
     ResponseVO<Boolean> saveData(@RequestBody DemoBiz1VO reqVO);
 
     @GetMapping("/test/plus/getByCode")
-    ResponseVO<DemoApiPageRespVO> getPlusTest(@RequestParam("code") String code);
+    ResponseVO<DemoPlusTestResp> getPlusTest(@RequestParam("code") String code);
 }

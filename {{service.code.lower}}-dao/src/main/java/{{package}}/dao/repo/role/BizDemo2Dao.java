@@ -5,7 +5,7 @@ import com.yh.common.lark.common.dao.Page;
 import com.yh.common.lark.common.dao.Pagination;
 import com.yh.common.lark.common.dao.Sort;
 import com.yh.common.lark.orm.dao.supports.BaseDao;
-import {{package}}.po.DemoBizPO;
+import {{package}}.dao.po.DemoBizPO;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -17,7 +17,7 @@ import java.util.Map;
  * @date: Created in 7/4/21 4:46 PM
  */
 @Component
-public interface BizDemo2Dao extends BaseDao<com.yh.scaffold.springboot.dao.po.DemoBizPO, Long> {
+public interface BizDemo2Dao extends BaseDao<DemoBizPO, Long> {
     /**
      * 分页数据查询
      * @param page
@@ -26,5 +26,5 @@ public interface BizDemo2Dao extends BaseDao<com.yh.scaffold.springboot.dao.po.D
      * @return
      */
     @QueryPage("findListCountByQueryMap")
-    Pagination<com.yh.scaffold.springboot.dao.po.DemoBizPO> findListByQueryMapWithPage(Page page, Sort[] sorts, Map<String, Object> params);
+    Pagination<DemoBizPO> findListByQueryMapWithPage(Page page, Sort[] sorts, Map<String, Object> params);
 }

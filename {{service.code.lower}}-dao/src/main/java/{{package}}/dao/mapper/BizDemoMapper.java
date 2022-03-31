@@ -1,7 +1,7 @@
 package {{package}}.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yh.scaffold.springboot.dao.po.DemoBizPO;
+import {{package}}.dao.po.DemoBizPO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

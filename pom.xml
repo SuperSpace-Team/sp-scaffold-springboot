@@ -4,23 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yh.scaffold</groupId>
-    <artifactId>yh-scaffold-springboot-parent</artifactId>
+    <groupId>com.sp.scaffold</groupId>
+    <artifactId>sp-scaffold-springboot</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
     <modules>
-        <module>yh-scaffold-springboot-feign</module>
-        <module>yh-scaffold-springboot-api</module>
-        <module>yh-scaffold-springboot-dao</module>
-        <module>yh-scaffold-springboot-service</module>
-        <module>yh-scaffold-springboot-server</module>
+        <module>sp-scaffold-springboot-feign</module>
+        <module>sp-scaffold-springboot-api</module>
+        <module>sp-scaffold-springboot-dao</module>
+        <module>sp-scaffold-springboot-service</module>
+        <module>sp-scaffold-springboot-server</module>
     </modules>
 
-    <!-- 依赖基础组件工具集(包含常用二方库、开源组件包父POM声明集yh-base-dependencies) -->
+    <!-- 依赖基础组件工具集(包含常用二方库、开源组件包父POM声明集sp-base-dependencies) -->
     <parent>
-        <groupId>com.yh.infra.comp</groupId>
-        <artifactId>yh-infra-comp-parent</artifactId>
+        <groupId>com.sp.infra.comp</groupId>
+        <artifactId>sp-infra-comp-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
@@ -31,23 +31,23 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.yh.scaffold</groupId>
-                <artifactId>yh-scaffold-springboot-api</artifactId>
+                <groupId>com.sp.scaffold</groupId>
+                <artifactId>sp-scaffold-springboot-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yh.scaffold</groupId>
-                <artifactId>yh-scaffold-springboot-feign</artifactId>
+                <groupId>com.sp.scaffold</groupId>
+                <artifactId>sp-scaffold-springboot-feign</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yh.scaffold</groupId>
-                <artifactId>yh-scaffold-springboot-dao</artifactId>
+                <groupId>com.sp.scaffold</groupId>
+                <artifactId>sp-scaffold-springboot-dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yh.scaffold</groupId>
-                <artifactId>yh-scaffold-springboot-service</artifactId>
+                <groupId>com.sp.scaffold</groupId>
+                <artifactId>sp-scaffold-springboot-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
@@ -56,8 +56,8 @@
     <dependencies>
         <!--基础组件核心包-->
         <dependency>
-            <groupId>com.yh.infra.comp</groupId>
-            <artifactId>yh-infra-comp-logger</artifactId>
+            <groupId>com.sp.infra.comp</groupId>
+            <artifactId>sp-infra-comp-logger</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>

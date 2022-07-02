@@ -1,29 +1,29 @@
-# 多模块Springboot脚手架
+# SuperSpace-多模块Springboot脚手架
 > 文档中心
 #### 总体研发规范
-    http://public-service.confluence.gw.yonghui.cn/pages/viewpage.action?pageId=34843178
+    http://public-service.confluence.superspace.cn/pages/viewpage.action?pageId=34843178
 
 #### API接口定义格式规范
-    http://public-service.confluence.gw.yonghui.cn/pages/viewpage.action?pageId=32387316
+    http://public-service.confluence.superspace.cn/pages/viewpage.action?pageId=32387316
 
 ####    公共规范包：
 ```
         <!--公共API开发规范包依赖-->
         <dependency>
-            <groupId>com.yh.infra.common</groupId>
-            <artifactId>yh-infra-common-lib</artifactId>
+            <groupId>com.sp.framework</groupId>
+            <artifactId>sp-framework-common</artifactId>
         </dependency>
         
         <!--公共Web项目规范包依赖-->
         <dependency>
-            <groupId>com.yh.infra.common</groupId>
-            <artifactId>yh-infra-common-web</artifactId>
+            <groupId>com.sp.framework</groupId>
+            <artifactId>sp-framework-web</artifactId>
         </dependency>
 ```
 
 #### 代码生成器
-    使用文档：http://public-service.confluence.gw.yonghui.cn/pages/viewpage.action?pageId=32393204
-    代码仓库：http://gitlab.yonghui.cn/operation-cp-gggit/yh-common-lark-generator.git
+    使用文档：http://public-service.confluence.superspace.cn/pages/viewpage.action?pageId=32393204
+    代码仓库：http://gitlab.superspace.cn/scaffold/sp-scaffold-generator.git
 > Swagger-ui
 
     http://localhost:8100/swagger-ui.html
@@ -39,9 +39,9 @@
 
 ## 工程结构(多模块详细包)说明
 
-    yh-scaffold-springboot-parent      服务名称,格式：yh-项目名-服务名
+    sp-scaffold-springboot      服务名称,格式：sp-项目名-服务名
     │
-    └─{{package}}.api               包命名：com.yh.服务名.api,微服务对外暴露的接口和域传输对象定义等,调用方依赖此包、功能酌情使用 
+    └─{{package}}.api               包命名：com.sp.服务名.api,微服务对外暴露的接口和域传输对象定义等,调用方依赖此包、功能酌情使用 
     │  ├─rest                       对外暴露的接口(调用方定义FeignClient类实现接口即可)
     │  ├─domain                     域传输对象定义
     │  │ │─vo                       视图对象(前端交互时使用)
@@ -52,18 +52,18 @@
     │  ├─exception                  异常【非必须】
     │  └─utils                      工具类【非必须】
     │
-    └─{{package}}.server            包命名：com.yh.服务名.server,工程启动模块,包括Controller层定义、Web全局配置等
+    └─{{package}}.server            包命名：com.sp.服务名.server,工程启动模块,包括Controller层定义、Web全局配置等
     │    ├─config                   Web全局配置
     │    │  └─SwaggerConfig.java    Swagger相关配置
     │    ├─controller               控制器定义(统一以@RestController声明)
-    │    └─YhApp.java               服务启动类【类名可自定义】
-    └─{{package}}.feign             包命名：com.yh.服务名.feign,调用其它服务的Feign接口定义模块
+    │    └─ScaffoldApp.java               服务启动类【类名可自定义】
+    └─{{package}}.feign             包命名：com.sp.服务名.feign,调用其它服务的Feign接口定义模块
     │    ├─client                   FeignClient目标调用接口定义(@FeignClient注解中的name、value和url建议定义到配置文件中)
     │    │  └─[role]                子包目录,调用目标业务服务名称
     │    ├─fallback                 FeignClient的降级逻辑实现(建议返回自定义错误或固定的SystemErrorCodeEnum.BUSINESS_ERROR或SYSTEM_ERROR或SYSTEM_UNKNOWN_EXCEPTION提示信息)
     │    └─vo                       Feign调用使用的VO(视图对象)定义
     │
-    └─{{package}}.service           包命名：com.yh.服务名.service,业务逻辑层,包括各业务Service接口定义和逻辑方法实现、BO(业务POJO类)定义等
+    └─{{package}}.service           包命名：com.sp.服务名.service,业务逻辑层,包括各业务Service接口定义和逻辑方法实现、BO(业务POJO类)定义等
     │    ├─base                     [推荐,非必须]
     │    │  ├─BaseBizService.java   基础业务Service接口定义(可酌情不使用)
     │    │  ├─BaseBizServiceImpl.java   基础业务实现类(可酌情不使用)
@@ -72,7 +72,7 @@
     │    ├─[user]                   子包目录,存放业务服务Service接口
     │    │  └─impl                  存放ServiceImpl实现类,业务Service接口方法逻辑实现
     │
-    └─{{package}}.dao               包命名：com.yh.服务名.dao,数据持久层
+    └─{{package}}.dao               包命名：com.sp.服务名.dao,数据持久层
     │    ├─aop                      业务聚合类方法逻辑实现
     │    ├─po                       PO(数据库实体POJO类)
     │    ├─mapper                   数据持久层Mapper接口定义(继承MP框架的BaseMapper<T>)
@@ -99,38 +99,38 @@
 
 ## Apollo 配置中心
 
-    http://public-service.itwork-book.gw.yonghui.cn/book/itwork/docs/qa/apollo.html
+    http://public-service.itwork-book.superspace.cn/book/itwork/docs/qa/apollo.html
 
 ## 日志服务
 
-    http://public-service.itwork-book.gw.yonghui.cn/book/itwork/docs/qa/elk.html
+    http://public-service.itwork-book.superspace.cn/book/itwork/docs/qa/elk.html
 
 ## 链路监控
 
-    http://public-service.itwork-book.gw.yonghui.cn/book/itwork/docs/qa/skywalking.html
+    http://public-service.itwork-book.superspace.cn/book/itwork/docs/qa/skywalking.html
 
 ## CICD
 
-    http://public-service.itwork-book.gw.yonghui.cn/book/itwork/docs/qa/cicd/cicd.html
+    http://public-service.itwork-book.superspace.cn/book/itwork/docs/qa/cicd/cicd.html
 
-## yh-infra-comp-*基础组件包 描述
+## sp-infra-comp-*基础组件包 描述
 
-* yh-infra-comp-feign               [Feign调用拦截 & OpenApi鉴权]
-* yh-infra-comp-apollo              [Apollo定义]
-* yh-infra-comp-datasource          [多数据源]
-* yh-infra-comp-excel               [Excel操作工具集]
-* yh-infra-comp-consul              [Consul公共client对象 & 配置项监听器]
-* yh-infra-comp-logger              [日志收集 & 自定义Logger]
-* yh-infra-comp-web-rest-registry   [REST API接口上报-SpringMVC]
-* yh-infra-comp-sc-rest-registry    [REST API接口上报-SpringCloud]
-* yh-infra-comp-geography           [第三方地图包操作工具集]
-* yh-infra-comp-dubbo               [Dubbo异常拦截封装 & 拒绝策略封装]
-* yh-infra-comp-elasticsearch       [ES操作工具集]
-* yh-infra-comp-redis               [Redis操作工具集]
+* sp-infra-comp-feign               [Feign调用拦截 & OpenApi鉴权]
+* sp-infra-comp-apollo              [Apollo定义]
+* sp-infra-comp-datasource          [多数据源]
+* sp-infra-comp-excel               [Excel操作工具集]
+* sp-infra-comp-consul              [Consul公共client对象 & 配置项监听器]
+* sp-infra-comp-logger              [日志收集 & 自定义Logger]
+* sp-infra-comp-web-rest-registry   [REST API接口上报-SpringMVC]
+* sp-infra-comp-sc-rest-registry    [REST API接口上报-SpringCloud]
+* sp-infra-comp-geography           [第三方地图包操作工具集]
+* sp-infra-comp-dubbo               [Dubbo异常拦截封装 & 拒绝策略封装]
+* sp-infra-comp-elasticsearch       [ES操作工具集]
+* sp-infra-comp-redis               [Redis操作工具集]
 
 ## 多数据源的配置
 
-1. pom.xml引入 yh-infra-comp-datasource
+1. pom.xml引入 sp-infra-comp-datasource
 2. application.yml 配置添加如下配置：
 
 <br>
@@ -156,8 +156,8 @@ spring:
         validationQuery: SELECT 1
       password: Ho5E9G3p96bo
       type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://10.19.187.125:3306/employee_center?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8
-      username: yhhy_stage
+      url: jdbc:mysql://10.19.13.125:3306/employee_center?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8
+      username: sphy_stage
     slave:
       driverClassName: com.mysql.jdbc.Driver
       filters: stat
@@ -174,8 +174,8 @@ spring:
       testWhileIdle: true
       timeBetweenEvictionRunsMillis: 60000
       type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://10.19.187.125:3306/employee_center?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8
-      username: yhhy_stage
+      url: jdbc:mysql://10.19.13.125:3306/employee_center?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8
+      username: sphy_stage
       validationQuery: SELECT 1
 
 ```

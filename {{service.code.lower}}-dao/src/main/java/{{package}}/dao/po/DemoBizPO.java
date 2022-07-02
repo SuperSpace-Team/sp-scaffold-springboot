@@ -1,7 +1,7 @@
 package {{package}}.dao.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.yh.infra.common.base.BasePO;
+import com.sp.framework.common.base.BasePO;
 import lombok.Data;
 
 /**

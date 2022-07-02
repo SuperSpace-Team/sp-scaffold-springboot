@@ -1,6 +1,6 @@
 package {{package}}.domain.vo;
 
-import com.yh.infra.common.vo.BasePageQueryReqVO;
+import com.sp.framework.common.vo.BasePageQueryReqVO;
 import {{package}}.api.domain.dto.MyBizReqDTO;
 import lombok.Data;
 

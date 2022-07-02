@@ -1,6 +1,6 @@
 package {{package}}.dao.aop;
 
-import com.yh.common.lark.orm.aop.QueryAspect;
+import com.sp.framework.orm.lark.lark.orm.aop.QueryAspect;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 

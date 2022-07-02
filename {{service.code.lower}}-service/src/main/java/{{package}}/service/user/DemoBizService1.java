@@ -1,8 +1,8 @@
 package {{package}}.service.user;
 
-import com.yh.common.lark.common.dao.Page;
-import com.yh.common.lark.common.dao.Pagination;
-import com.yh.infra.common.vo.BasePageQueryReqVO;
+import com.sp.framework.orm.lark.lark.common.dao.Page;
+import com.sp.framework.orm.lark.lark.common.dao.Pagination;
+import com.sp.framework.common.vo.BasePageQueryReqVO;
 import {{package}}.service.base.BaseBizService;
 import {{package}}.service.bo.DemoBiz1BO;
 

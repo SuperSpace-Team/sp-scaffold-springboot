@@ -1,1 +1,1 @@
-include: http://api.itwork.yonghui.cn/devops-action/v1/ci_contents/{{tokennum}}/content.yaml
+include: http://api.itwork.superspace.cn/devops-action/v1/ci_contents/{{tokennum}}/content.yaml

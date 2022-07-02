@@ -1,6 +1,6 @@
 package {{package}}.api.exception;
 
-import com.yh.infra.common.exception.BusinessException;
+import com.sp.framework.common.exception.BusinessException;
 
 /**
  * @description: [示例]自定义运行时(非受检)异常

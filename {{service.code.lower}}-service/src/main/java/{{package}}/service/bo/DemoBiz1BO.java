@@ -1,6 +1,6 @@
 package {{package}}.service.bo;
 
-import com.yh.infra.common.bo.BaseBO;
+import com.sp.framework.common.bo.BaseBO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

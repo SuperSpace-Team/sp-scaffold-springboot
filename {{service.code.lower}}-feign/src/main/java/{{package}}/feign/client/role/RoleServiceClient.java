@@ -1,7 +1,7 @@
 package {{package}}.feign.client.role;
 
-import com.yh.infra.common.vo.BasePageQueryRespVO;
-import com.yh.infra.common.vo.ResponseVO;
+import com.sp.framework.common.vo.BasePageQueryRespVO;
+import com.sp.framework.common.vo.ResponseVO;
 import {{package}}.feign.fallback.RoleServiceClientFallback;
 import {{package}}.feign.vo.QueryRolesPageReqVO;
 import {{package}}.feign.vo.RoleInfoVO;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author: {{USER}}
  * @date: Created in 10/27/21 7:58 PM
  */
-@FeignClient(name = "${yh.role-service.name:}", url="${yh.role-service.url:}", fallback = RoleServiceClientFallback.class)
+@FeignClient(name = "${sp.role-service.name:}", url="${sp.role-service.url:}", fallback = RoleServiceClientFallback.class)
 public interface RoleServiceClient {
     /**
      * [示例]检查角色是否生效

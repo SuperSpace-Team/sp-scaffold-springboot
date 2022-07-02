@@ -79,8 +79,8 @@ spring:
   profiles:
     active: local
   project:
-    name: yh-app-template
-yh:
+    name: sp-app-template
+sp:
   role-service:
     name: role-service
     url: ~

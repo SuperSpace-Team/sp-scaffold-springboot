@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.yonghui</groupId>
+        <groupId>com.sp.scaffold</groupId>
         <artifactId>{{service.code}}</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -24,14 +24,14 @@
 
         <!--依赖API层的API接口定义-->
         <dependency>
-            <groupId>com.yonghui</groupId>
+            <groupId>com.sp.scaffold</groupId>
             <artifactId>{{service.code.lower}}-api</artifactId>
         </dependency>
 
         <!--基础组件Feign包-->
         <dependency>
-            <groupId>com.yh.infra.comp</groupId>
-            <artifactId>yh-infra-comp-feign</artifactId>
+            <groupId>com.sp.infra.comp</groupId>
+            <artifactId>sp-infra-comp-feign</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.yonghui</groupId>
+        <groupId>com.sp.scaffold</groupId>
         <artifactId>{{service.code}}</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -30,14 +30,14 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
 
-        <!--依赖YH规范化ORM框架lark-->
+        <!--依赖规范化ORM框架lark-->
         <dependency>
-            <groupId>com.yh.common</groupId>
-            <artifactId>yh-lark-common</artifactId>
+            <groupId>com.sp.framework</groupId>
+            <artifactId>sp-framework-lark-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.yh.common</groupId>
-            <artifactId>yh-lark-orm</artifactId>
+            <groupId>com.sp.framework</groupId>
+            <artifactId>sp-framework-lark-orm</artifactId>
             <exclusions>
                 <exclusion>
                     <artifactId>mybatis</artifactId>
@@ -50,13 +50,13 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.yh.common</groupId>
-            <artifactId>yh-lark-tool</artifactId>
+            <groupId>com.sp.framework</groupId>
+            <artifactId>sp-framework-lark-tool</artifactId>
         </dependency>
 
         <!--依赖API层Domain定义-->
         <dependency>
-            <groupId>com.yonghui</groupId>
+            <groupId>com.sp.scaffold</groupId>
             <artifactId>{{service.code.lower}}-api</artifactId>
         </dependency>
     </dependencies>

@@ -14,14 +14,14 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @author ${USER}
  * @date 2020/7/2
  */
-@SpringBootApplication(scanBasePackages = { "{{package}}", "com.yh.infra.comp", "com.baomidou", "com.yh.infra"})
+@SpringBootApplication(scanBasePackages = { "{{package}}", "com.sp.infra.comp", "com.baomidou", "com.sp.infra"})
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableApolloConfig
 @EnableFeignClients(basePackages = "{{package}}.feign")
 @EnableAspectJAutoProxy
-public class YhApp {
+public class ScaffoldApp {
     public static void main(String[] args) {
-        SpringApplication.run(YhApp.class, args);
+        SpringApplication.run(ScaffoldApp.class, args);
     }
 }

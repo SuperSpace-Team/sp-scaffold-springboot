@@ -1,9 +1,9 @@
 package {{package}}.feign.fallback;
 
-import com.yh.infra.common.enums.SystemErrorCodeEnum;
-import com.yh.infra.common.utils.ResponseUtil;
-import com.yh.infra.common.vo.BasePageQueryRespVO;
-import com.yh.infra.common.vo.ResponseVO;
+import com.sp.framework.common.enums.SystemErrorCodeEnum;
+import com.sp.framework.common.utils.ResponseUtil;
+import com.sp.framework.common.vo.BasePageQueryRespVO;
+import com.sp.framework.common.vo.ResponseVO;
 import {{package}}.api.enums.BusinessErrorCodeEnum;
 import {{package}}.feign.vo.QueryRolesPageReqVO;
 import {{package}}.feign.vo.RoleInfoVO;

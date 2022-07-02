@@ -1,6 +1,6 @@
 package {{package}}.api.domain.dto;
 
-import com.yh.infra.common.dto.BaseRequestDTO;
+import com.sp.framework.common.dto.BaseRequestDTO;
 import lombok.Data;
 
 /**

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yonghui</groupId>
+    <groupId>com.sp.scaffold</groupId>
     <artifactId>{{service.code}}</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
@@ -18,10 +18,10 @@
         <module>{{service.code.lower}}-server</module>
     </modules>
 
-    <!-- 依赖基础组件工具集(包含常用二方库、开源组件包父POM声明集yh-base-dependencies) -->
+    <!-- 依赖基础组件工具集(包含常用二方库、开源组件包父POM声明集sp-base-dependencies) -->
     <parent>
-        <groupId>com.yh.infra.comp</groupId>
-        <artifactId>yh-infra-comp-parent</artifactId>
+        <groupId>com.sp.infra.comp</groupId>
+        <artifactId>sp-infra-comp-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
@@ -32,22 +32,22 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.yonghui</groupId>
+                <groupId>com.sp.scaffold</groupId>
                 <artifactId>{{service.code.lower}}-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yonghui</groupId>
+                <groupId>com.sp.scaffold</groupId>
                 <artifactId>{{service.code.lower}}-feign</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yonghui</groupId>
+                <groupId>com.sp.scaffold</groupId>
                 <artifactId>{{service.code.lower}}-dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yonghui</groupId>
+                <groupId>com.sp.scaffold</groupId>
                 <artifactId>{{service.code.lower}}-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -57,15 +57,15 @@
     <dependencies>
         <!--基础组件核心包-->
         <dependency>
-            <groupId>com.yh.infra.comp</groupId>
-            <artifactId>yh-infra-comp-logger</artifactId>
+            <groupId>com.sp.infra.comp</groupId>
+            <artifactId>sp-infra-comp-logger</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
         </dependency>
 
-        {{yh-template-dependencies}}
+        {{sp-template-dependencies}}
     </dependencies>
 
 </project>

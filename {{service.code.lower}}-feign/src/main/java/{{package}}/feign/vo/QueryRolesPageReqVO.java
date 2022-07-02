@@ -1,6 +1,6 @@
 package {{package}}.feign.vo;
 
-import com.yh.infra.common.vo.BasePageQueryReqVO;
+import com.sp.framework.common.vo.BasePageQueryReqVO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

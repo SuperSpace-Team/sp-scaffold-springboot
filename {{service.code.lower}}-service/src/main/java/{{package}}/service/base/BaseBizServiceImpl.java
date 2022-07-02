@@ -1,10 +1,10 @@
 package {{package}}.service.base;
 
-import com.yh.common.lark.orm.dao.supports.BaseDao;
-import com.yh.infra.common.bo.BaseBO;
-import com.yh.infra.common.enums.SystemErrorCodeEnum;
-import com.yh.infra.common.exception.BusinessException;
-import com.yh.infra.comp.core.validator.BizValidationManager;
+import com.sp.framework.orm.lark.orm.dao.supports.BaseDao;
+import com.sp.framework.common.bo.BaseBO;
+import com.sp.framework.common.enums.SystemErrorCodeEnum;
+import com.sp.framework.common.exception.BusinessException;
+import com.sp.infra.comp.core.validator.BizValidationManager;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;

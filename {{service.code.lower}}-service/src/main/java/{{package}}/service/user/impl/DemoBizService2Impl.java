@@ -1,6 +1,6 @@
 package {{package}}.service.user.impl;
 
-import com.yh.infra.common.utils.bean.DozerUtil;
+import com.sp.framework.common.utils.bean.DozerUtil;
 import {{package}}.dao.repo.role.BizDemo2Dao;
 import {{package}}.dao.repo.role.BizDemo2Repository;
 import {{package}}.service.bo.DemoBiz2BO;

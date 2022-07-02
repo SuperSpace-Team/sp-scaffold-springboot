@@ -1,10 +1,10 @@
 package {{package}}.dao.repo.role;
 
-import com.yh.common.lark.common.annotation.QueryPage;
-import com.yh.common.lark.common.dao.Page;
-import com.yh.common.lark.common.dao.Pagination;
-import com.yh.common.lark.common.dao.Sort;
-import com.yh.common.lark.orm.dao.supports.BaseDao;
+import com.sp.framework.orm.lark.lark.common.annotation.QueryPage;
+import com.sp.framework.orm.lark.lark.common.dao.Page;
+import com.sp.framework.orm.lark.lark.common.dao.Pagination;
+import com.sp.framework.orm.lark.lark.common.dao.Sort;
+import com.sp.framework.orm.lark.lark.orm.dao.supports.BaseDao;
 import {{package}}.dao.po.DemoBizPO;
 import org.springframework.stereotype.Component;
 

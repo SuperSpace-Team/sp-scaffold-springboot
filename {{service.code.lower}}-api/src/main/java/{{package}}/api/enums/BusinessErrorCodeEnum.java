@@ -1,8 +1,8 @@
 package {{package}}.api.enums;
 
-import com.yh.infra.common.base.BaseBizEnum;
-import com.yh.infra.common.exception.BusinessException;
-import com.yh.infra.common.exception.SystemException;
+import com.sp.framework.common.base.BaseBizEnum;
+import com.sp.framework.common.exception.BusinessException;
+import com.sp.framework.common.exception.SystemException;
 
 import java.text.MessageFormat;
 

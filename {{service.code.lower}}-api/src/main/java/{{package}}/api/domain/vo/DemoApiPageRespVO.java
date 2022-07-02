@@ -1,6 +1,6 @@
 package {{package}}.api.domain.vo;
 
-import com.yh.infra.common.vo.BasePageQueryRespVO;
+import com.sp.framework.common.vo.BasePageQueryRespVO;
 import lombok.Data;
 
 import java.util.List;

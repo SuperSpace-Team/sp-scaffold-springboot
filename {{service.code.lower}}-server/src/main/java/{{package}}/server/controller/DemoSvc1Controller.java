@@ -1,20 +1,19 @@
 package {{package}}.server.controller;
 
-import com.yh.common.lark.common.dao.Pagination;
-import com.yh.infra.common.utils.ResponseUtil;
-import com.yh.infra.common.utils.bean.DozerUtil;
-import com.yh.infra.common.vo.BasePageQueryReqVO;
-import com.yh.infra.common.vo.ResponseVO;
-import com.yh.infra.comp.core.annotation.ApiResponseConversion;
-import com.yh.infra.comp.core.enums.AdaptTypeEnum;
-import com.yh.infra.comp.core.model.WebResult;
+import com.sp.framework.orm.lark.lark.common.dao.Pagination;
+import com.sp.framework.common.utils.ResponseUtil;
+import com.sp.framework.common.utils.bean.DozerUtil;
+import com.sp.framework.common.vo.BasePageQueryReqVO;
+import com.sp.framework.common.vo.ResponseVO;
+import com.sp.infra.comp.core.annotation.ApiResponseConversion;
+import com.sp.infra.comp.core.enums.AdaptTypeEnum;
+import com.sp.infra.comp.core.model.WebResult;
 import {{package}}.service.bo.DemoBiz1BO;
 import {{package}}.api.domain.vo.DemoApiPageRespVO;
 import {{package}}.api.domain.vo.DemoPlusTestResp;
 import {{package}}.api.domain.vo.DemoBiz1VO;
 import {{package}}.api.rest.DemoSvc1Rest;
 import {{package}}.service.user.DemoBizService1;
-import com.yonghui.core.utils.R;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -85,15 +84,6 @@ public class DemoSvc1Controller implements DemoSvc1Rest {
                 new DemoPlusTestResp(DozerUtil.mapList(demoBizService1.plusTestGetByCode(code), DemoBiz1VO.class)));
     }
 
-    @GetMapping("/convert")
-    @ApiResponseConversion(adaptType = AdaptTypeEnum.R)
-    public ResponseVO<DemoBiz1VO> testConvert(){
-        DemoBiz1VO biz1VO = new DemoBiz1VO();
-        biz1VO.setCode("afsfd");
-        biz1VO.setDescription("ffwfedesc");
-        return ResponseUtil.getFromData(biz1VO);
-    }
-
     /**
      * 兼容原云超脚手架返回类型R<T>示例
      * @return
@@ -108,7 +98,7 @@ public class DemoSvc1Controller implements DemoSvc1Rest {
     }
 
     /**
-     * 兼容原云创脚手架返回类似类型com.yh.infra.comp.core.model.WebResult<T>示例
+     * 兼容原云创脚手架返回类似类型com.sp.infra.comp.core.model.WebResult<T>示例
      * @return
      */
     @GetMapping("/convert3")

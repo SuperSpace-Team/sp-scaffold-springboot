@@ -1,10 +1,10 @@
 package {{package}}.service.user.impl;
 
-import com.yh.common.lark.common.dao.Page;
-import com.yh.common.lark.common.dao.Pagination;
-import com.yh.common.lark.common.dao.Sort;
-import com.yh.infra.common.utils.bean.DozerUtil;
-import com.yh.infra.common.vo.BasePageQueryReqVO;
+import com.sp.framework.orm.lark.lark.common.dao.Page;
+import com.sp.framework.orm.lark.lark.common.dao.Pagination;
+import com.sp.framework.orm.lark.lark.common.dao.Sort;
+import com.sp.framework.common.utils.bean.DozerUtil;
+import com.sp.framework.common.vo.BasePageQueryReqVO;
 import {{package}}.dao.repo.user.BizDemo1Dao;
 import {{package}}.dao.repo.user.BizDemo1Repository;
 import {{package}}.service.bo.DemoBiz1BO;
